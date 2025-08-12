@@ -1,0 +1,594 @@
+// Initialize quiz
+        function initQuiz() {
+            try {
+                debugLog(&quot;Initializing quiz&quot;);
+                loadProgress();
+                const startButton = document.getElementById(&#x27;start-test&#x27;);
+                if (!startButton) {
+                    throw new Error(&quot;Start test button not found&quot;);
+                }
+                startButton.addEventListener(&#x27;click&#x27;, startQuiz);
+                debugLog(&quot;Start test button listener attached&quot;);
+                document.getElementById(&#x27;previous-btn&#x27;).addEventListener(&#x27;click&#x27;, showPreviousQuestion);
+                document.getElementById(&#x27;next-btn&#x27;).addEventListener(&#x27;click&#x27;, showNextQuestion);
+                document.getElementById(&#x27;mark-review&#x27;).addEventListener(&#x27;click&#x27;, toggleMarkForReview);
+                document.getElementById(&#x27;nav-toggle&#x27;).addEventListener(&#x27;click&#x27;, toggleNavPanel);
+                document.getElementById(&#x27;submit-test&#x27;).addEventListener(&#x27;click&#x27;, showSubmitModal);
+                document.getElementById(&#x27;continue-test&#x27;).addEventListener(&#x27;click&#x27;, closeExitModal);
+                document.getElementById(&#x27;exit-test&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+                    debugLog(&quot;Exiting test&quot;);
+                    localStorage.removeItem(`quiz_${quizId}`);
+                    window.location.reload();
+                });
+                document.getElementById(&#x27;cancel-submit&#x27;).addEventListener(&#x27;click&#x27;, closeSubmitModal);
+                document.getElementById(&#x27;confirm-submit&#x27;).addEventListener(&#x27;click&#x27;, submitTest);
+                document.getElementById(&#x27;take-again&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+                    debugLog(&quot;Restarting test&quot;);
+                    localStorage.removeItem(`quiz_${quizId}`);
+                    window.location.reload();
+                });
+                document.getElementById(&#x27;review-test&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; showResults(currentResultQuestion));
+                document.getElementById(&#x27;close-nav&#x27;).addEventListener(&#x27;click&#x27;, toggleNavPanel);
+                document.getElementById(&#x27;theme-toggle&#x27;).addEventListener(&#x27;click&#x27;, toggleTheme);
+                document.getElementById(&#x27;nav-filter&#x27;).addEventListener(&#x27;change&#x27;, updateNavPanel);
+                document.getElementById(&#x27;prev-result&#x27;).addEventListener(&#x27;click&#x27;, showPreviousResult);
+                document.getElementById(&#x27;next-result&#x27;).addEventListener(&#x27;click&#x27;, showNextResult);
+                document.getElementById(&#x27;results-nav-toggle&#x27;).addEventListener(&#x27;click&#x27;, toggleResultsNavPanel);
+                document.getElementById(&#x27;close-results-nav&#x27;).addEventListener(&#x27;click&#x27;, toggleResultsNavPanel);
+                document.getElementById(&#x27;results-nav-filter&#x27;).addEventListener(&#x27;change&#x27;, updateResultsNavPanel);
+                debugLog(&quot;Quiz initialized successfully&quot;);
+            } catch (e) {
+                console.error(&quot;Failed to initialize quiz:&quot;, e);
+                debugLog(&quot;Failed to initialize quiz: &quot; + e.message);
+                document.getElementById(&#x27;error-message&#x27;).innerHTML = &quot;Error initializing quiz. Please check the console for details or contact support.&quot;;
+                document.getElementById(&#x27;error-message&#x27;).classList.remove(&#x27;hidden&#x27;);
+                document.getElementById(&#x27;start-test&#x27;).disabled = true;
+            }
+        }
+
+        // Start quiz
+        function startQuiz() {
+            try {
+                debugLog(&quot;Starting quiz&quot;);
+                document.getElementById(&#x27;instructions&#x27;).classList.add(&#x27;hidden&#x27;);
+                document.getElementById(&#x27;quiz&#x27;).classList.remove(&#x27;hidden&#x27;);
+                showQuestion(currentQuestion);
+                startTimer();
+                updateNavPanel();
+                debugLog(&quot;Quiz started successfully&quot;);
+            } catch (e) {
+                console.error(&quot;Error starting quiz:&quot;, e);
+                debugLog(&quot;Failed to start quiz: &quot; + e.message);
+                document.getElementById(&#x27;error-message&#x27;).innerHTML = &quot;Error starting quiz. Please check the console for details or contact support.&quot;;
+                document.getElementById(&#x27;error-message&#x27;).classList.remove(&#x27;hidden&#x27;);
+                document.getElementById(&#x27;quiz&#x27;).classList.add(&#x27;hidden&#x27;);
+                document.getElementById(&#x27;instructions&#x27;).classList.remove(&#x27;hidden&#x27;);
+            }
+        }
+
+        // Show question
+        function showQuestion(index) {
+            try {
+                debugLog(`Showing question ${index + 1}`);
+                currentQuestion = index;
+                const q = questions[index];
+                if (!q) {
+                    throw new Error(`Question ${index} is undefined`);
+                }
+                document.getElementById(&#x27;question-number&#x27;).innerHTML = `Question &lt;span&gt;${index + 1}&lt;/span&gt; of ${questions.length}`;
+                document.getElementById(&#x27;question-text&#x27;).innerHTML = q.text || &quot;No question text available&quot;;
+                const imagesDiv = document.getElementById(&#x27;question-images&#x27;);
+                imagesDiv.innerHTML = q.question_images &amp;&amp; q.question_images.length &gt; 0
+                    ? q.question_images.map(url =&gt; `&lt;img src=&quot;${url}&quot; alt=&quot;Question Image&quot; class=&quot;max-w-full h-auto rounded-lg&quot;&gt;`).join(&#x27;&#x27;)
+                    : &#x27;&#x27;;
+                const optionsDiv = document.getElementById(&#x27;options&#x27;);
+                optionsDiv.innerHTML = q.options &amp;&amp; q.options.length &gt; 0
+                    ? q.options.map(opt =&gt; `
+                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot; 
+                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot; 
+                                aria-label=&quot;Option ${opt.label}: ${opt.text}&quot;&gt;
+                            ${opt.label}. ${opt.text}
+                        &lt;/button&gt;
+                    `).join(&#x27;&#x27;)
+                    : &#x27;&lt;p class=&quot;text-red-500&quot;&gt;No options available&lt;/p&gt;&#x27;;
+                document.getElementById(&#x27;previous-btn&#x27;).disabled = index === 0;
+                document.getElementById(&#x27;next-btn&#x27;).disabled = index === questions.length - 1;
+                document.getElementById(&#x27;mark-review&#x27;).classList.toggle(&#x27;marked&#x27;, markedForReview[index]);
+                updateProgressBar();
+                saveProgress();
+                window.scrollTo({ top: 0, behavior: &#x27;smooth&#x27; });
+                debugLog(`Question ${index + 1} displayed successfully`);
+            } catch (e) {
+                console.error(&quot;Error displaying question:&quot;, e);
+                debugLog(&quot;Failed to display question: &quot; + e.message);
+            }
+        }
+
+        // Select option
+        function selectOption(index, label) {
+            try {
+                debugLog(`Selecting option ${label} for question ${index + 1}`);
+                answers[index] = label;
+                const optionsDiv = document.getElementById(&#x27;options&#x27;);
+                const optionButtons = optionsDiv.querySelectorAll(&#x27;.option-btn&#x27;);
+                optionButtons.forEach(btn =&gt; {
+                    const btnLabel = btn.textContent.trim().split(&#x27;.&#x27;)[0];
+                    btn.classList.toggle(&#x27;selected&#x27;, btnLabel === label);
+                });
+                updateNavPanel();
+                saveProgress();
+                debugLog(`Option ${label} selected for question ${index + 1}`);
+            } catch (e) {
+                console.error(&quot;Error selecting option:&quot;, e);
+                debugLog(&quot;Failed to select option: &quot; + e.message);
+            }
+        }
+
+        // Toggle mark for review
+        function toggleMarkForReview() {
+            try {
+                debugLog(`Toggling mark for review on question ${currentQuestion + 1}`);
+                markedForReview[currentQuestion] = !markedForReview[currentQuestion];
+                document.getElementById(&#x27;mark-review&#x27;).classList.toggle(&#x27;marked&#x27;, markedForReview[currentQuestion]);
+                updateNavPanel();
+                saveProgress();
+                debugLog(`Mark for review toggled for question ${currentQuestion + 1}`);
+            } catch (e) {
+                console.error(&quot;Error marking for review:&quot;, e);
+                debugLog(&quot;Failed to mark for review: &quot; + e.message);
+            }
+        }
+
+        // Navigate to previous question
+        function showPreviousQuestion() {
+            try {
+                debugLog(`Navigating to previous question from ${currentQuestion + 1}`);
+                if (currentQuestion &gt; 0) {
+                    currentQuestion--;
+                    showQuestion(currentQuestion);
+                }
+            } catch (e) {
+                console.error(&quot;Error navigating to previous question:&quot;, e);
+                debugLog(&quot;Failed to navigate to previous question: &quot; + e.message);
+            }
+        }
+
+        // Navigate to next question
+        function showNextQuestion() {
+            try {
+                debugLog(`Navigating to next question from ${currentQuestion + 1}`);
+                if (currentQuestion &lt; questions.length - 1) {
+                    currentQuestion++;
+                    showQuestion(currentQuestion);
+                }
+            } catch (e) {
+                console.error(&quot;Error navigating to next question:&quot;, e);
+                debugLog(&quot;Failed to navigate to next question: &quot; + e.message);
+            }
+        }
+
+        // Handle question navigation click
+        function handleQuestionNavClick(index) {
+            try {
+                debugLog(`Navigating to question ${index + 1} via nav panel`);
+                showQuestion(index);
+                toggleNavPanel();
+            } catch (e) {
+                console.error(&quot;Error handling navigation click:&quot;, e);
+                debugLog(&quot;Failed to navigate via nav panel: &quot; + e.message);
+            }
+        }
+
+        // Start timer
+        function startTimer() {
+            try {
+                debugLog(&quot;Starting timer&quot;);
+                timerInterval = setInterval(() =&gt; {
+                    if (timeRemaining &lt;= 0) {
+                        debugLog(&quot;Timer expired, submitting test&quot;);
+                        clearInterval(timerInterval);
+                        submitTest();
+                    } else {
+                        timeRemaining--;
+                        const minutes = Math.floor(timeRemaining / 60);
+                        const seconds = timeRemaining % 60;
+                        document.getElementById(&#x27;timer&#x27;).innerHTML = `Time Remaining: &lt;span&gt;${minutes.toString().padStart(2, &#x27;0&#x27;)}:${seconds.toString().padStart(2, &#x27;0&#x27;)}&lt;/span&gt;`;
+                        saveProgress();
+                    }
+                }, 1000);
+                debugLog(&quot;Timer started successfully&quot;);
+            } catch (e) {
+                console.error(&quot;Error starting timer:&quot;, e);
+                debugLog(&quot;Failed to start timer: &quot; + e.message);
+            }
+        }
+
+        // Update progress bar
+        function updateProgressBar() {
+            try {
+                debugLog(&quot;Updating progress bar&quot;);
+                const progress = ((currentQuestion + 1) / questions.length) * 100;
+                document.getElementById(&#x27;progress-bar&#x27;).style.width = `${progress}%`;
+                debugLog(&quot;Progress bar updated&quot;);
+            } catch (e) {
+                console.error(&quot;Error updating progress bar:&quot;, e);
+                debugLog(&quot;Failed to update progress bar: &quot; + e.message);
+            }
+        }
+
+        // Update quiz navigation panel
+        function updateNavPanel() {
+            try {
+                debugLog(&quot;Updating quiz navigation panel&quot;);
+                const filter = document.getElementById(&#x27;nav-filter&#x27;).value;
+                const navGrid = document.getElementById(&#x27;nav-grid&#x27;);
+                navGrid.innerHTML = questions.map((_, i) =&gt; {
+                    if (filter === &#x27;answered&#x27; &amp;&amp; !answers[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;unanswered&#x27; &amp;&amp; answers[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedForReview[i]) return &#x27;&#x27;;
+                    return `
+                        &lt;button class=&quot;question-nav-btn ${answers[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedForReview[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
+                                onclick=&quot;handleQuestionNavClick(${i})&quot;
+                                aria-label=&quot;Go to Question ${i + 1}&quot;&gt;
+                            ${i + 1}
+                        &lt;/button&gt;
+                    `;
+                }).join(&#x27;&#x27;);
+                debugLog(&quot;Quiz navigation panel updated&quot;);
+            } catch (e) {
+                console.error(&quot;Error updating quiz navigation panel:&quot;, e);
+                debugLog(&quot;Failed to update quiz navigation panel: &quot; + e.message);
+            }
+        }
+
+        // Update results navigation panel
+        function updateResultsNavPanel() {
+            try {
+                debugLog(&quot;Updating results navigation panel&quot;);
+                const filter = document.getElementById(&#x27;results-nav-filter&#x27;).value;
+                const navGrid = document.getElementById(&#x27;results-nav-grid&#x27;);
+                navGrid.innerHTML = questions.map((_, i) =&gt; {
+                    if (filter === &#x27;answered&#x27; &amp;&amp; !answers[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;unanswered&#x27; &amp;&amp; answers[i]) return &#x27;&#x27;;
+                    if (filter === &#x27;marked&#x27; &amp;&amp; !markedForReview[i]) return &#x27;&#x27;;
+                    return `
+                        &lt;button class=&quot;result-nav-btn-grid ${answers[i] ? &#x27;answered&#x27; : &#x27;unanswered&#x27;} ${markedForReview[i] ? &#x27;marked-nav&#x27; : &#x27;&#x27;}&quot;
+                                onclick=&quot;handleResultNavClick(${i})&quot;
+                                aria-label=&quot;Go to Result for Question ${i + 1}&quot;&gt;
+                            ${i + 1}
+                        &lt;/button&gt;
+                    `;
+                }).join(&#x27;&#x27;);
+                debugLog(&quot;Results navigation panel updated&quot;);
+            } catch (e) {
+                console.error(&quot;Error updating results navigation panel:&quot;, e);
+                debugLog(&quot;Failed to update results navigation panel: &quot; + e.message);
+            }
+        }
+
+        // Toggle quiz navigation panel
+        function toggleNavPanel() {
+            try {
+                debugLog(&quot;Toggling quiz navigation panel&quot;);
+                const navPanel = document.getElementById(&#x27;nav-panel&#x27;);
+                navPanel.classList.toggle(&#x27;hidden&#x27;);
+                debugLog(&quot;Quiz navigation panel toggled&quot;);
+            } catch (e) {
+                console.error(&quot;Error toggling quiz navigation panel:&quot;, e);
+                debugLog(&quot;Failed to toggle quiz navigation panel: &quot; + e.message);
+            }
+        }
+
+        // Toggle results navigation panel
+        function toggleResultsNavPanel() {
+            try {
+                debugLog(&quot;Toggling results navigation panel&quot;);
+                const resultsNavPanel = document.getElementById(&#x27;results-nav-panel&#x27;);
+                resultsNavPanel.classList.toggle(&#x27;hidden&#x27;);
+                if (!resultsNavPanel.classList.contains(&#x27;hidden&#x27;)) {
+                    updateResultsNavPanel();
+                }
+                debugLog(&quot;Results navigation panel toggled&quot;);
+            } catch (e) {
+                console.error(&quot;Error toggling results navigation panel:&quot;, e);
+                debugLog(&quot;Failed to toggle results navigation panel: &quot; + e.message);
+            }
+        }
+
+        // Handle result navigation click
+        function handleResultNavClick(index) {
+            try {
+                debugLog(`Navigating to result for question ${index + 1} via nav panel`);
+                showResults(index);
+                toggleResultsNavPanel();
+            } catch (e) {
+                console.error(&quot;Error handling result navigation click:&quot;, e);
+                debugLog(&quot;Failed to navigate to result: &quot; + e.message);
+            }
+        }
+
+        // Show submit modal
+        function showSubmitModal() {
+            try {
+                debugLog(&quot;Showing submit modal&quot;);
+                const attempted = answers.filter(a =&gt; a !== null).length;
+                document.getElementById(&#x27;attempted-count&#x27;).textContent = attempted;
+                document.getElementById(&#x27;unattempted-count&#x27;).textContent = questions.length - attempted;
+                document.getElementById(&#x27;submit-modal&#x27;).classList.remove(&#x27;hidden&#x27;);
+                debugLog(&quot;Submit modal displayed&quot;);
+            } catch (e) {
+                console.error(&quot;Error showing submit modal:&quot;, e);
+                debugLog(&quot;Failed to show submit modal: &quot; + e.message);
+            }
+        }
+
+        // Close submit modal
+        function closeSubmitModal() {
+            try {
+                debugLog(&quot;Closing submit modal&quot;);
+                document.getElementById(&#x27;submit-modal&#x27;).classList.add(&#x27;hidden&#x27;);
+                debugLog(&quot;Submit modal closed&quot;);
+            } catch (e) {
+                console.error(&quot;Error closing submit modal:&quot;, e);
+                debugLog(&quot;Failed to close submit modal: &quot; + e.message);
+            }
+        }
+
+        // Close exit modal
+        function closeExitModal() {
+            try {
+                debugLog(&quot;Closing exit modal&quot;);
+                document.getElementById(&#x27;exit-modal&#x27;).classList.add(&#x27;hidden&#x27;);
+                debugLog(&quot;Exit modal closed&quot;);
+            } catch (e) {
+                console.error(&quot;Error closing exit modal:&quot;, e);
+                debugLog(&quot;Failed to close exit modal: &quot; + e.message);
+            }
+        }
+
+        // Submit test
+        function submitTest() {
+            try {
+                debugLog(&quot;Submitting test&quot;);
+                clearInterval(timerInterval);
+                document.getElementById(&#x27;quiz&#x27;).classList.add(&#x27;hidden&#x27;);
+                document.getElementById(&#x27;submit-modal&#x27;).classList.add(&#x27;hidden&#x27;);
+                document.getElementById(&#x27;results&#x27;).classList.remove(&#x27;hidden&#x27;);
+                showResults(0); // Start with first question
+                // Trigger confetti animation
+                confetti({
+                    particleCount: 100,
+                    spread: 70,
+                    origin: { y: 0.6 }
+                });
+                localStorage.removeItem(`quiz_${quizId}`);
+                debugLog(&quot;Test submitted successfully&quot;);
+            } catch (e) {
+                console.error(&quot;Error submitting test:&quot;, e);
+                debugLog(&quot;Failed to submit test: &quot; + e.message);
+            }
+        }
+
+        // Show result for a single question
+        function showResults(index) {
+            try {
+                debugLog(`Showing result for question ${index + 1}`);
+                currentResultQuestion = index;
+                let correct = 0, wrong = 0, unanswered = 0, marked = 0;
+                answers.forEach((answer, i) =&gt; {
+                    const isCorrect = answer &amp;&amp; questions[i].options.find(opt =&gt; opt.label === answer)?.correct;
+                    if (answer === null) unanswered++;
+                    else if (isCorrect) correct++;
+                    else wrong++;
+                    if (markedForReview[i]) marked++;
+                });
+                const q = questions[index];
+                if (!q) {
+                    throw new Error(`Question ${index} is undefined`);
+                }
+                const userAnswer = answers[index];
+                const isCorrect = userAnswer &amp;&amp; q.options.find(opt =&gt; opt.label === userAnswer)?.correct;
+                const resultsContent = document.getElementById(&#x27;results-content&#x27;);
+                resultsContent.innerHTML = `
+                    &lt;div class=&quot;border p-4 rounded-lg ${isCorrect ? &#x27;bg-green-50&#x27; : userAnswer ? &#x27;bg-red-50&#x27; : &#x27;bg-gray-50&#x27;}&quot;&gt;
+                        &lt;p class=&quot;font-semibold&quot;&gt;Question ${index + 1}: ${q.text || &#x27;No question text&#x27;}&lt;/p&gt;
+                        ${q.question_images &amp;&amp; q.question_images.length &gt; 0 ? q.question_images.map(url =&gt; `&lt;img src=&quot;${url}&quot; alt=&quot;Question Image&quot; class=&quot;max-w-full h-auto rounded-lg my-2&quot;&gt;`).join(&#x27;&#x27;) : &#x27;&#x27;}
+                        &lt;p&gt;&lt;strong&gt;Your Answer:&lt;/strong&gt; ${userAnswer ? `${userAnswer}. ${q.options.find(opt =&gt; opt.label === userAnswer)?.text || &#x27;Invalid option&#x27;}` : &#x27;Unanswered&#x27;}&lt;/p&gt;
+                        &lt;p&gt;&lt;strong&gt;Correct Answer:&lt;/strong&gt; ${q.correct_answer || &#x27;Unknown&#x27;}&lt;/p&gt;
+                        &lt;div class=&quot;mt-2&quot;&gt;${q.explanation || &#x27;No explanation available&#x27;}&lt;/div&gt;
+                        ${q.explanation_images &amp;&amp; q.explanation_images.length &gt; 0 ? q.explanation_images.map(url =&gt; `&lt;img src=&quot;${url}&quot; alt=&quot;Explanation Image&quot; class=&quot;max-w-full h-auto rounded-lg my-2&quot;&gt;`).join(&#x27;&#x27;) : &#x27;&#x27;}
+                        ${q.video ? `
+                            &lt;button class=&quot;play-video bg-blue-500 text-white px-4 py-2 rounded-lg mt-2&quot; 
+                                    onclick=&quot;loadVideo(this, &#x27;${q.video}&#x27;, &#x27;video-${index}&#x27;)&quot;
+                                    aria-label=&quot;Play explanation video for Question ${index + 1}&quot;&gt;
+                                Play Video Explanation
+                            &lt;/button&gt;
+                            &lt;div id=&quot;video-${index}&quot; class=&quot;video-container mt-2&quot;&gt;&lt;/div&gt;
+                        ` : &#x27;&lt;p class=&quot;text-gray-500 mt-2&quot;&gt;No video available&lt;/p&gt;&#x27;}
+                        ${q.audio ? `
+                            &lt;button class=&quot;play-audio bg-blue-500 text-white px-4 py-2 rounded-lg mt-2&quot; 
+                                    onclick=&quot;loadAudio(this, &#x27;${q.audio}&#x27;, &#x27;audio-${index}&#x27;)&quot;
+                                    aria-label=&quot;Play audio explanation for Question ${index + 1}&quot;&gt;
+                                Play Audio Explanation
+                            &lt;/button&gt;
+                            &lt;div id=&quot;audio-${index}&quot; class=&quot;audio-container mt-2&quot;&gt;&lt;/div&gt;
+                        ` : &#x27;&#x27;}
+                    &lt;/div&gt;
+                `;
+                document.getElementById(&#x27;correct-count&#x27;).textContent = correct;
+                document.getElementById(&#x27;wrong-count&#x27;).textContent = wrong;
+                document.getElementById(&#x27;unanswered-count&#x27;).textContent = unanswered;
+                document.getElementById(&#x27;marked-count&#x27;).textContent = marked;
+                document.getElementById(&#x27;result-question-number&#x27;).innerHTML = `Question &lt;span&gt;${index + 1}&lt;/span&gt; of ${questions.length}`;
+                document.getElementById(&#x27;prev-result&#x27;).disabled = index === 0;
+                document.getElementById(&#x27;next-result&#x27;).disabled = index === questions.length - 1;
+                updateResultsNavPanel();
+                window.scrollTo({ top: 0, behavior: &#x27;smooth&#x27; });
+                debugLog(`Result for question ${index + 1} displayed successfully`);
+            } catch (e) {
+                console.error(&quot;Error displaying result:&quot;, e);
+                debugLog(&quot;Failed to display result: &quot; + e.message);
+            }
+        }
+
+        // Navigate to previous result
+        function showPreviousResult() {
+            try {
+                debugLog(`Navigating to previous result from question ${currentResultQuestion + 1}`);
+                if (currentResultQuestion &gt; 0) {
+                    showResults(currentResultQuestion - 1);
+                }
+            } catch (e) {
+                console.error(&quot;Error navigating to previous result:&quot;, e);
+                debugLog(&quot;Failed to navigate to previous result: &quot; + e.message);
+            }
+        }
+
+        // Navigate to next result
+        function showNextResult() {
+            try {
+                debugLog(`Navigating to next result from question ${currentResultQuestion + 1}`);
+                if (currentResultQuestion &lt; questions.length - 1) {
+                    showResults(currentResultQuestion + 1);
+                }
+            } catch (e) {
+                console.error(&quot;Error navigating to next result:&quot;, e);
+                debugLog(&quot;Failed to navigate to next result: &quot; + e.message);
+            }
+        }
+
+        // Lazy-load video
+        function loadVideo(button, videoUrl, containerId) {
+            try {
+                debugLog(`Loading video for ${containerId}: ${videoUrl}`);
+                if (!videoUrl) {
+                    const container = document.getElementById(containerId);
+                    container.innerHTML = `&lt;p class=&quot;text-gray-500&quot;&gt;No video available&lt;/p&gt;`;
+                    button.remove();
+                    debugLog(&quot;No video URL provided&quot;);
+                    return;
+                }
+                const container = document.getElementById(containerId);
+                container.innerHTML = `
+                    &lt;div class=&quot;video-loading&quot;&gt;&lt;/div&gt;
+                    &lt;video controls class=&quot;w-full max-w-[600px] rounded-lg&quot; preload=&quot;metadata&quot; aria-label=&quot;Video explanation&quot;&gt;
+                        &lt;source src=&quot;${videoUrl}&quot; type=&quot;${videoUrl.endsWith(&#x27;.m3u8&#x27;) ? &#x27;application/x-mpegURL&#x27; : &#x27;video/mp4&#x27;}&quot;&gt;
+                        Your browser does not support the video tag.
+                    &lt;/video&gt;
+                `;
+                container.classList.add(&#x27;active&#x27;);
+                button.remove();
+                // Initialize HLS.js for .m3u8 videos
+                const video = container.querySelector(&#x27;video&#x27;);
+                if (videoUrl.endsWith(&#x27;.m3u8&#x27;) &amp;&amp; Hls.isSupported()) {
+                    const hls = new Hls();
+                    hls.loadSource(videoUrl);
+                    hls.attachMedia(video);
+                    hls.on(Hls.Events.ERROR, (event, data) =&gt; {
+                        console.error(&quot;HLS.js error:&quot;, data);
+                        container.innerHTML = `&lt;p class=&quot;text-red-500&quot;&gt;Error loading video. &lt;a href=&quot;${videoUrl}&quot; target=&quot;_blank&quot; aria-label=&quot;Open video in new tab&quot;&gt;Open video&lt;/a&gt;&lt;/p&gt;`;
+                        debugLog(&quot;HLS.js error: &quot; + JSON.stringify(data));
+                    });
+                } else if (videoUrl.endsWith(&#x27;.m3u8&#x27;) &amp;&amp; video.canPlayType(&#x27;application/vnd.apple.mpegurl&#x27;)) {
+                    video.src = videoUrl;
+                }
+                // Handle video load errors
+                video.onerror = () =&gt; {
+                    console.error(&quot;Video load error for URL:&quot;, videoUrl);
+                    container.innerHTML = `&lt;p class=&quot;text-red-500&quot;&gt;Error loading video. &lt;a href=&quot;${videoUrl}&quot; target=&quot;_blank&quot; aria-label=&quot;Open video in new tab&quot;&gt;Open video&lt;/a&gt;&lt;/p&gt;`;
+                    debugLog(&quot;Video load error for URL: &quot; + videoUrl);
+                };
+                // Remove loading spinner when video is ready
+                video.onloadedmetadata = () =&gt; {
+                    container.querySelector(&#x27;.video-loading&#x27;).remove();
+                    debugLog(&quot;Video loaded successfully&quot;);
+                };
+            } catch (e) {
+                console.error(&quot;Error loading video:&quot;, e);
+                debugLog(&quot;Failed to load video: &quot; + e.message);
+                const container = document.getElementById(containerId);
+                container.innerHTML = `&lt;p class=&quot;text-red-500&quot;&gt;Error loading video. &lt;a href=&quot;${videoUrl}&quot; target=&quot;_blank&quot; aria-label=&quot;Open video in new tab&quot;&gt;Open video&lt;/a&gt;&lt;/p&gt;`;
+            }
+        }
+
+        // Lazy-load audio
+        function loadAudio(button, audioUrl, containerId) {
+            try {
+                debugLog(`Loading audio for ${containerId}: ${audioUrl}`);
+                if (!audioUrl) {
+                    const container = document.getElementById(containerId);
+                    container.innerHTML = `&lt;p class=&quot;text-gray-500&quot;&gt;No audio available&lt;/p&gt;`;
+                    button.remove();
+                    debugLog(&quot;No audio URL provided&quot;);
+                    return;
+                }
+                const container = document.getElementById(containerId);
+                container.innerHTML = `
+                    &lt;audio controls class=&quot;w-full max-w-[600px]&quot; preload=&quot;metadata&quot; aria-label=&quot;Audio explanation&quot;&gt;
+                        &lt;source src=&quot;${audioUrl}&quot; type=&quot;audio/mpeg&quot;&gt;
+                        Your browser does not support the audio tag.
+                    &lt;/audio&gt;
+                `;
+                container.classList.add(&#x27;active&#x27;);
+                button.remove();
+                // Handle audio load errors
+                const audio = container.querySelector(&#x27;audio&#x27;);
+                audio.onerror = () =&gt; {
+                    console.error(&quot;Audio load error for URL:&quot;, audioUrl);
+                    container.innerHTML = `&lt;p class=&quot;text-red-500&quot;&gt;Error loading audio. &lt;a href=&quot;${audioUrl}&quot; target=&quot;_blank&quot; aria-label=&quot;Open audio in new tab&quot;&gt;Open audio&lt;/a&gt;&lt;/p&gt;`;
+                    debugLog(&quot;Audio load error for URL: &quot; + audioUrl);
+                };
+                debugLog(&quot;Audio loaded successfully&quot;);
+            } catch (e) {
+                console.error(&quot;Error loading audio:&quot;, e);
+                debugLog(&quot;Failed to load audio: &quot; + e.message);
+                const container = document.getElementById(containerId);
+                container.innerHTML = `&lt;p class=&quot;text-red-500&quot;&gt;Error loading audio. &lt;a href=&quot;${audioUrl}&quot; target=&quot;_blank&quot; aria-label=&quot;Open audio in new tab&quot;&gt;Open audio&lt;/a&gt;&lt;/p&gt;`;
+            }
+        }
+
+        // Toggle dark mode
+        function toggleTheme() {
+            try {
+                debugLog(&quot;Toggling theme&quot;);
+                document.documentElement.classList.toggle(&#x27;dark&#x27;);
+                localStorage.setItem(&#x27;theme&#x27;, document.documentElement.classList.contains(&#x27;dark&#x27;) ? &#x27;dark&#x27; : &#x27;light&#x27;);
+                debugLog(&quot;Theme toggled successfully&quot;);
+            } catch (e) {
+                console.error(&quot;Error toggling theme:&quot;, e);
+                debugLog(&quot;Failed to toggle theme: &quot; + e.message);
+            }
+        }
+
+        // Load theme preference
+        function loadTheme() {
+            try {
+                debugLog(&quot;Loading theme preference&quot;);
+                const theme = localStorage.getItem(&#x27;theme&#x27;);
+                if (theme === &#x27;dark&#x27;) {
+                    document.documentElement.classList.add(&#x27;dark&#x27;);
+                }
+                debugLog(&quot;Theme loaded successfully&quot;);
+            } catch (e) {
+                console.error(&quot;Error loading theme:&quot;, e);
+                debugLog(&quot;Failed to load theme: &quot; + e.message);
+            }
+        }
+
+        // Initialize on DOM content loaded
+        window.addEventListener(&#x27;DOMContentLoaded&#x27;, () =&gt; {
+            try {
+                debugLog(&quot;DOM content loaded, initializing quiz&quot;);
+                loadTheme();
+                initQuiz();
+            } catch (e) {
+                console.error(&quot;Error during DOMContentLoaded:&quot;, e);
+                debugLog(&quot;Failed to initialize on DOMContentLoaded: &quot; + e.message);
+                document.getElementById(&#x27;error-message&#x27;).innerHTML = &quot;Error initializing quiz. Please check the console for details or contact support.&quot;;
+                document.getElementById(&#x27;error-message&#x27;).classList.remove(&#x27;hidden&#x27;);
+            }
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;" frameborder="0" width="100%" height="2000px"></iframe>
+</div>
