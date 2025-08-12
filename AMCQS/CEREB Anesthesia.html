@@ -175,7 +175,14 @@
 </script>
 </head>
 <body>
-  <div class="nav-buttons"><button onclick="showTest('test1')">Anesthesia E&D (Mission NEET PG) - 14-08-2023 - 2023-08-14</button>
+  <button onclick="history.back()" style="position: absolute; top: 20px; left: 20px; background: transparent; color: white; border: none; padding: 10px; cursor: pointer; z-index: 1001; font-size: 20px;">
+  <i class="fas fa-arrow-left"></i>
+</button>
+
+<div class="dropdown-wrapper">
+  <button class="dropdown-toggle" id="dropdownToggle" onclick="toggleDropdown()">☰ INDEX</button>
+  <div class="dropdown-menu" id="dropdownMenu">
+<button onclick="showTest('test1')">Anesthesia E&D (Mission NEET PG) - 14-08-2023 - 2023-08-14</button>
 <button onclick="showTest('test2')">Anesthesia E&D (Mission NEET PG_INICET 2.0) - 26-04-2024 - 2024-04-26</button>
 <button onclick="showTest('test3')">Anesthesia E&D - Mission 1.5 - 16-03-2024 - 2024-03-16</button>
 <button onclick="showTest('test4')">Anesthesia E&D - Mission 1.5, Lap 2 - 05-06-2024 - 2024-06-05</button>

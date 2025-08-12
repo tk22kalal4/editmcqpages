@@ -175,7 +175,14 @@
 </script>
 </head>
 <body>
-  <div class="nav-buttons"><button onclick="showTest('test1')">Anaesthetic_Equipments_and_Pre-operative_Assessment</button>
+  <button onclick="history.back()" style="position: absolute; top: 20px; left: 20px; background: transparent; color: white; border: none; padding: 10px; cursor: pointer; z-index: 1001; font-size: 20px;">
+  <i class="fas fa-arrow-left"></i>
+</button>
+
+<div class="dropdown-wrapper">
+  <button class="dropdown-toggle" id="dropdownToggle" onclick="toggleDropdown()">☰ INDEX</button>
+  <div class="dropdown-menu" id="dropdownMenu">
+<button onclick="showTest('test1')">Anaesthetic_Equipments_and_Pre-operative_Assessment</button>
 <button onclick="showTest('test2')">Anesthesia_Image_Based_Question</button>
 <button onclick="showTest('test3')">CPR</button>
 <button onclick="showTest('test4')">Clinical_vignettes_Anesthesia</button>

@@ -175,7 +175,14 @@
 </script>
 </head>
 <body>
-  <div class="nav-buttons"><button onclick="showTest('test1')">Anatomy-Special_First_Year_Class_Test</button>
+  <button onclick="history.back()" style="position: absolute; top: 20px; left: 20px; background: transparent; color: white; border: none; padding: 10px; cursor: pointer; z-index: 1001; font-size: 20px;">
+  <i class="fas fa-arrow-left"></i>
+</button>
+
+<div class="dropdown-wrapper">
+  <button class="dropdown-toggle" id="dropdownToggle" onclick="toggleDropdown()">☰ INDEX</button>
+  <div class="dropdown-menu" id="dropdownMenu">
+<button onclick="showTest('test1')">Anatomy-Special_First_Year_Class_Test</button>
 <button onclick="showTest('test2')">Anatomy_-Thorax__General_Histology-Special_First_Year_Class_Test</button>
 <button onclick="showTest('test3')">Anatomy_Lower_Limb_Gen_EmbryoGeneral_Anatomy_Special_First_Year_Class_Test</button>
 <button onclick="showTest('test4')">Anatomy_Upper_Limb-Special_First_Year_Class_Test</button>
