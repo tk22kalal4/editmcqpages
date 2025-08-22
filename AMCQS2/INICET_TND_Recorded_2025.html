@@ -484,7 +484,7 @@
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;!-- Quiz Section --&gt;
-&lt;section class=&quot;container mx-auto p-4 md:p-6 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
+&lt;section class=&quot;container mx-auto px-4 md:px-6 pt-4 md:pt-6 pb-1 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
 &lt;div class=&quot;bg-white rounded-lg shadow-md p-4 md:p-6&quot;&gt;
 &lt;!-- Progress Bar --&gt;
 &lt;div class=&quot;w-full bg-gray-200 rounded-full h-3 mb-4&quot;&gt;
@@ -492,7 +492,7 @@
 &lt;/div&gt;
 &lt;!-- Question Header --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center mb-4&quot;&gt;
-&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 75&lt;/h2&gt;
+&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 4&lt;/h2&gt;
 &lt;p class=&quot;text-lg font-semibold mt-2 md:mt-0&quot; id=&quot;timer&quot;&gt;Time Remaining: &lt;span&gt;00:00&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- Question Content --&gt;
@@ -503,11 +503,21 @@
 &lt;/div&gt;
 &lt;!-- Navigation Buttons --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4&quot;&gt;
-&lt;button class=&quot;bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition w-full md:w-auto&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
-&lt;button class=&quot;bg-yellow-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-yellow-400 transition w-full md:w-auto&quot; id=&quot;mark-review&quot;&gt;Mark for Review&lt;/button&gt;
-&lt;button class=&quot;bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
-&lt;button class=&quot;bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition w-full md:w-auto&quot; id=&quot;nav-toggle&quot;&gt;Questions Navigation&lt;/button&gt;
-&lt;button class=&quot;bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
+&lt;div class=&quot;flex gap-2 w-full md:w-auto&quot;&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2&quot;&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;mark-review&quot;&gt;
+    Review
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-5 w-5&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;currentColor&quot;&gt;
+      &lt;path d=&quot;M10 2a1 1 0 00-1 1v14l3.293-3.293a1 1 0 011.414 0L17 17V3a1 1 0 00-1-1H10z&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;nav-toggle&quot;&gt;
+    Question 🧭
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-green-500 text-white px-6 py-3 w-44 h-14 rounded-lg hover:bg-green-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;
@@ -1779,7 +1789,7 @@
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;!-- Quiz Section --&gt;
-&lt;section class=&quot;container mx-auto p-4 md:p-6 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
+&lt;section class=&quot;container mx-auto px-4 md:px-6 pt-4 md:pt-6 pb-1 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
 &lt;div class=&quot;bg-white rounded-lg shadow-md p-4 md:p-6&quot;&gt;
 &lt;!-- Progress Bar --&gt;
 &lt;div class=&quot;w-full bg-gray-200 rounded-full h-3 mb-4&quot;&gt;
@@ -1787,7 +1797,7 @@
 &lt;/div&gt;
 &lt;!-- Question Header --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center mb-4&quot;&gt;
-&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 75&lt;/h2&gt;
+&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 4&lt;/h2&gt;
 &lt;p class=&quot;text-lg font-semibold mt-2 md:mt-0&quot; id=&quot;timer&quot;&gt;Time Remaining: &lt;span&gt;00:00&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- Question Content --&gt;
@@ -1798,11 +1808,21 @@
 &lt;/div&gt;
 &lt;!-- Navigation Buttons --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4&quot;&gt;
-&lt;button class=&quot;bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition w-full md:w-auto&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
-&lt;button class=&quot;bg-yellow-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-yellow-400 transition w-full md:w-auto&quot; id=&quot;mark-review&quot;&gt;Mark for Review&lt;/button&gt;
-&lt;button class=&quot;bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
-&lt;button class=&quot;bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition w-full md:w-auto&quot; id=&quot;nav-toggle&quot;&gt;Questions Navigation&lt;/button&gt;
-&lt;button class=&quot;bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
+&lt;div class=&quot;flex gap-2 w-full md:w-auto&quot;&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2&quot;&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;mark-review&quot;&gt;
+    Review
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-5 w-5&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;currentColor&quot;&gt;
+      &lt;path d=&quot;M10 2a1 1 0 00-1 1v14l3.293-3.293a1 1 0 011.414 0L17 17V3a1 1 0 00-1-1H10z&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;nav-toggle&quot;&gt;
+    Question 🧭
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-green-500 text-white px-6 py-3 w-44 h-14 rounded-lg hover:bg-green-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;
@@ -3074,7 +3094,7 @@
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;!-- Quiz Section --&gt;
-&lt;section class=&quot;container mx-auto p-4 md:p-6 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
+&lt;section class=&quot;container mx-auto px-4 md:px-6 pt-4 md:pt-6 pb-1 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
 &lt;div class=&quot;bg-white rounded-lg shadow-md p-4 md:p-6&quot;&gt;
 &lt;!-- Progress Bar --&gt;
 &lt;div class=&quot;w-full bg-gray-200 rounded-full h-3 mb-4&quot;&gt;
@@ -3082,7 +3102,7 @@
 &lt;/div&gt;
 &lt;!-- Question Header --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center mb-4&quot;&gt;
-&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 77&lt;/h2&gt;
+&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 4&lt;/h2&gt;
 &lt;p class=&quot;text-lg font-semibold mt-2 md:mt-0&quot; id=&quot;timer&quot;&gt;Time Remaining: &lt;span&gt;00:00&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- Question Content --&gt;
@@ -3093,11 +3113,21 @@
 &lt;/div&gt;
 &lt;!-- Navigation Buttons --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4&quot;&gt;
-&lt;button class=&quot;bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition w-full md:w-auto&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
-&lt;button class=&quot;bg-yellow-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-yellow-400 transition w-full md:w-auto&quot; id=&quot;mark-review&quot;&gt;Mark for Review&lt;/button&gt;
-&lt;button class=&quot;bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
-&lt;button class=&quot;bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition w-full md:w-auto&quot; id=&quot;nav-toggle&quot;&gt;Questions Navigation&lt;/button&gt;
-&lt;button class=&quot;bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
+&lt;div class=&quot;flex gap-2 w-full md:w-auto&quot;&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2&quot;&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;mark-review&quot;&gt;
+    Review
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-5 w-5&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;currentColor&quot;&gt;
+      &lt;path d=&quot;M10 2a1 1 0 00-1 1v14l3.293-3.293a1 1 0 011.414 0L17 17V3a1 1 0 00-1-1H10z&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;nav-toggle&quot;&gt;
+    Question 🧭
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-green-500 text-white px-6 py-3 w-44 h-14 rounded-lg hover:bg-green-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;
@@ -4369,7 +4399,7 @@
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;!-- Quiz Section --&gt;
-&lt;section class=&quot;container mx-auto p-4 md:p-6 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
+&lt;section class=&quot;container mx-auto px-4 md:px-6 pt-4 md:pt-6 pb-1 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
 &lt;div class=&quot;bg-white rounded-lg shadow-md p-4 md:p-6&quot;&gt;
 &lt;!-- Progress Bar --&gt;
 &lt;div class=&quot;w-full bg-gray-200 rounded-full h-3 mb-4&quot;&gt;
@@ -4377,7 +4407,7 @@
 &lt;/div&gt;
 &lt;!-- Question Header --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center mb-4&quot;&gt;
-&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 75&lt;/h2&gt;
+&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 4&lt;/h2&gt;
 &lt;p class=&quot;text-lg font-semibold mt-2 md:mt-0&quot; id=&quot;timer&quot;&gt;Time Remaining: &lt;span&gt;00:00&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- Question Content --&gt;
@@ -4388,11 +4418,21 @@
 &lt;/div&gt;
 &lt;!-- Navigation Buttons --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4&quot;&gt;
-&lt;button class=&quot;bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition w-full md:w-auto&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
-&lt;button class=&quot;bg-yellow-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-yellow-400 transition w-full md:w-auto&quot; id=&quot;mark-review&quot;&gt;Mark for Review&lt;/button&gt;
-&lt;button class=&quot;bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
-&lt;button class=&quot;bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition w-full md:w-auto&quot; id=&quot;nav-toggle&quot;&gt;Questions Navigation&lt;/button&gt;
-&lt;button class=&quot;bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
+&lt;div class=&quot;flex gap-2 w-full md:w-auto&quot;&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2&quot;&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;mark-review&quot;&gt;
+    Review
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-5 w-5&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;currentColor&quot;&gt;
+      &lt;path d=&quot;M10 2a1 1 0 00-1 1v14l3.293-3.293a1 1 0 011.414 0L17 17V3a1 1 0 00-1-1H10z&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;nav-toggle&quot;&gt;
+    Question 🧭
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-green-500 text-white px-6 py-3 w-44 h-14 rounded-lg hover:bg-green-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;
@@ -5664,7 +5704,7 @@
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;!-- Quiz Section --&gt;
-&lt;section class=&quot;container mx-auto p-4 md:p-6 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
+&lt;section class=&quot;container mx-auto px-4 md:px-6 pt-4 md:pt-6 pb-1 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
 &lt;div class=&quot;bg-white rounded-lg shadow-md p-4 md:p-6&quot;&gt;
 &lt;!-- Progress Bar --&gt;
 &lt;div class=&quot;w-full bg-gray-200 rounded-full h-3 mb-4&quot;&gt;
@@ -5672,7 +5712,7 @@
 &lt;/div&gt;
 &lt;!-- Question Header --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center mb-4&quot;&gt;
-&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 75&lt;/h2&gt;
+&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 4&lt;/h2&gt;
 &lt;p class=&quot;text-lg font-semibold mt-2 md:mt-0&quot; id=&quot;timer&quot;&gt;Time Remaining: &lt;span&gt;00:00&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- Question Content --&gt;
@@ -5683,11 +5723,21 @@
 &lt;/div&gt;
 &lt;!-- Navigation Buttons --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4&quot;&gt;
-&lt;button class=&quot;bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition w-full md:w-auto&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
-&lt;button class=&quot;bg-yellow-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-yellow-400 transition w-full md:w-auto&quot; id=&quot;mark-review&quot;&gt;Mark for Review&lt;/button&gt;
-&lt;button class=&quot;bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
-&lt;button class=&quot;bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition w-full md:w-auto&quot; id=&quot;nav-toggle&quot;&gt;Questions Navigation&lt;/button&gt;
-&lt;button class=&quot;bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
+&lt;div class=&quot;flex gap-2 w-full md:w-auto&quot;&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2&quot;&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;mark-review&quot;&gt;
+    Review
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-5 w-5&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;currentColor&quot;&gt;
+      &lt;path d=&quot;M10 2a1 1 0 00-1 1v14l3.293-3.293a1 1 0 011.414 0L17 17V3a1 1 0 00-1-1H10z&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;nav-toggle&quot;&gt;
+    Question 🧭
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-green-500 text-white px-6 py-3 w-44 h-14 rounded-lg hover:bg-green-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;
@@ -6959,7 +7009,7 @@
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;!-- Quiz Section --&gt;
-&lt;section class=&quot;container mx-auto p-4 md:p-6 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
+&lt;section class=&quot;container mx-auto px-4 md:px-6 pt-4 md:pt-6 pb-1 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
 &lt;div class=&quot;bg-white rounded-lg shadow-md p-4 md:p-6&quot;&gt;
 &lt;!-- Progress Bar --&gt;
 &lt;div class=&quot;w-full bg-gray-200 rounded-full h-3 mb-4&quot;&gt;
@@ -6967,7 +7017,7 @@
 &lt;/div&gt;
 &lt;!-- Question Header --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center mb-4&quot;&gt;
-&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 75&lt;/h2&gt;
+&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 4&lt;/h2&gt;
 &lt;p class=&quot;text-lg font-semibold mt-2 md:mt-0&quot; id=&quot;timer&quot;&gt;Time Remaining: &lt;span&gt;00:00&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- Question Content --&gt;
@@ -6978,11 +7028,21 @@
 &lt;/div&gt;
 &lt;!-- Navigation Buttons --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4&quot;&gt;
-&lt;button class=&quot;bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition w-full md:w-auto&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
-&lt;button class=&quot;bg-yellow-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-yellow-400 transition w-full md:w-auto&quot; id=&quot;mark-review&quot;&gt;Mark for Review&lt;/button&gt;
-&lt;button class=&quot;bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
-&lt;button class=&quot;bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition w-full md:w-auto&quot; id=&quot;nav-toggle&quot;&gt;Questions Navigation&lt;/button&gt;
-&lt;button class=&quot;bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
+&lt;div class=&quot;flex gap-2 w-full md:w-auto&quot;&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2&quot;&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;mark-review&quot;&gt;
+    Review
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-5 w-5&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;currentColor&quot;&gt;
+      &lt;path d=&quot;M10 2a1 1 0 00-1 1v14l3.293-3.293a1 1 0 011.414 0L17 17V3a1 1 0 00-1-1H10z&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;nav-toggle&quot;&gt;
+    Question 🧭
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-green-500 text-white px-6 py-3 w-44 h-14 rounded-lg hover:bg-green-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;
@@ -8254,7 +8314,7 @@
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;!-- Quiz Section --&gt;
-&lt;section class=&quot;container mx-auto p-4 md:p-6 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
+&lt;section class=&quot;container mx-auto px-4 md:px-6 pt-4 md:pt-6 pb-1 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
 &lt;div class=&quot;bg-white rounded-lg shadow-md p-4 md:p-6&quot;&gt;
 &lt;!-- Progress Bar --&gt;
 &lt;div class=&quot;w-full bg-gray-200 rounded-full h-3 mb-4&quot;&gt;
@@ -8262,7 +8322,7 @@
 &lt;/div&gt;
 &lt;!-- Question Header --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center mb-4&quot;&gt;
-&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 75&lt;/h2&gt;
+&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 4&lt;/h2&gt;
 &lt;p class=&quot;text-lg font-semibold mt-2 md:mt-0&quot; id=&quot;timer&quot;&gt;Time Remaining: &lt;span&gt;00:00&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- Question Content --&gt;
@@ -8273,11 +8333,21 @@
 &lt;/div&gt;
 &lt;!-- Navigation Buttons --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4&quot;&gt;
-&lt;button class=&quot;bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition w-full md:w-auto&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
-&lt;button class=&quot;bg-yellow-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-yellow-400 transition w-full md:w-auto&quot; id=&quot;mark-review&quot;&gt;Mark for Review&lt;/button&gt;
-&lt;button class=&quot;bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
-&lt;button class=&quot;bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition w-full md:w-auto&quot; id=&quot;nav-toggle&quot;&gt;Questions Navigation&lt;/button&gt;
-&lt;button class=&quot;bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
+&lt;div class=&quot;flex gap-2 w-full md:w-auto&quot;&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2&quot;&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;mark-review&quot;&gt;
+    Review
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-5 w-5&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;currentColor&quot;&gt;
+      &lt;path d=&quot;M10 2a1 1 0 00-1 1v14l3.293-3.293a1 1 0 011.414 0L17 17V3a1 1 0 00-1-1H10z&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;nav-toggle&quot;&gt;
+    Question 🧭
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-green-500 text-white px-6 py-3 w-44 h-14 rounded-lg hover:bg-green-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;
@@ -9549,7 +9619,7 @@
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;!-- Quiz Section --&gt;
-&lt;section class=&quot;container mx-auto p-4 md:p-6 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
+&lt;section class=&quot;container mx-auto px-4 md:px-6 pt-4 md:pt-6 pb-1 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
 &lt;div class=&quot;bg-white rounded-lg shadow-md p-4 md:p-6&quot;&gt;
 &lt;!-- Progress Bar --&gt;
 &lt;div class=&quot;w-full bg-gray-200 rounded-full h-3 mb-4&quot;&gt;
@@ -9557,7 +9627,7 @@
 &lt;/div&gt;
 &lt;!-- Question Header --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center mb-4&quot;&gt;
-&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 75&lt;/h2&gt;
+&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 4&lt;/h2&gt;
 &lt;p class=&quot;text-lg font-semibold mt-2 md:mt-0&quot; id=&quot;timer&quot;&gt;Time Remaining: &lt;span&gt;00:00&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- Question Content --&gt;
@@ -9568,11 +9638,21 @@
 &lt;/div&gt;
 &lt;!-- Navigation Buttons --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4&quot;&gt;
-&lt;button class=&quot;bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition w-full md:w-auto&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
-&lt;button class=&quot;bg-yellow-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-yellow-400 transition w-full md:w-auto&quot; id=&quot;mark-review&quot;&gt;Mark for Review&lt;/button&gt;
-&lt;button class=&quot;bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
-&lt;button class=&quot;bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition w-full md:w-auto&quot; id=&quot;nav-toggle&quot;&gt;Questions Navigation&lt;/button&gt;
-&lt;button class=&quot;bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
+&lt;div class=&quot;flex gap-2 w-full md:w-auto&quot;&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2&quot;&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;mark-review&quot;&gt;
+    Review
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-5 w-5&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;currentColor&quot;&gt;
+      &lt;path d=&quot;M10 2a1 1 0 00-1 1v14l3.293-3.293a1 1 0 011.414 0L17 17V3a1 1 0 00-1-1H10z&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;nav-toggle&quot;&gt;
+    Question 🧭
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-green-500 text-white px-6 py-3 w-44 h-14 rounded-lg hover:bg-green-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;
@@ -10844,7 +10924,7 @@
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;!-- Quiz Section --&gt;
-&lt;section class=&quot;container mx-auto p-4 md:p-6 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
+&lt;section class=&quot;container mx-auto px-4 md:px-6 pt-4 md:pt-6 pb-1 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
 &lt;div class=&quot;bg-white rounded-lg shadow-md p-4 md:p-6&quot;&gt;
 &lt;!-- Progress Bar --&gt;
 &lt;div class=&quot;w-full bg-gray-200 rounded-full h-3 mb-4&quot;&gt;
@@ -10852,7 +10932,7 @@
 &lt;/div&gt;
 &lt;!-- Question Header --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center mb-4&quot;&gt;
-&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 75&lt;/h2&gt;
+&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 4&lt;/h2&gt;
 &lt;p class=&quot;text-lg font-semibold mt-2 md:mt-0&quot; id=&quot;timer&quot;&gt;Time Remaining: &lt;span&gt;00:00&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- Question Content --&gt;
@@ -10863,11 +10943,21 @@
 &lt;/div&gt;
 &lt;!-- Navigation Buttons --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4&quot;&gt;
-&lt;button class=&quot;bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition w-full md:w-auto&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
-&lt;button class=&quot;bg-yellow-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-yellow-400 transition w-full md:w-auto&quot; id=&quot;mark-review&quot;&gt;Mark for Review&lt;/button&gt;
-&lt;button class=&quot;bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
-&lt;button class=&quot;bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition w-full md:w-auto&quot; id=&quot;nav-toggle&quot;&gt;Questions Navigation&lt;/button&gt;
-&lt;button class=&quot;bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
+&lt;div class=&quot;flex gap-2 w-full md:w-auto&quot;&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2&quot;&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;mark-review&quot;&gt;
+    Review
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-5 w-5&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;currentColor&quot;&gt;
+      &lt;path d=&quot;M10 2a1 1 0 00-1 1v14l3.293-3.293a1 1 0 011.414 0L17 17V3a1 1 0 00-1-1H10z&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;nav-toggle&quot;&gt;
+    Question 🧭
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-green-500 text-white px-6 py-3 w-44 h-14 rounded-lg hover:bg-green-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;
@@ -12139,7 +12229,7 @@
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;!-- Quiz Section --&gt;
-&lt;section class=&quot;container mx-auto p-4 md:p-6 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
+&lt;section class=&quot;container mx-auto px-4 md:px-6 pt-4 md:pt-6 pb-1 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
 &lt;div class=&quot;bg-white rounded-lg shadow-md p-4 md:p-6&quot;&gt;
 &lt;!-- Progress Bar --&gt;
 &lt;div class=&quot;w-full bg-gray-200 rounded-full h-3 mb-4&quot;&gt;
@@ -12147,7 +12237,7 @@
 &lt;/div&gt;
 &lt;!-- Question Header --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center mb-4&quot;&gt;
-&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 75&lt;/h2&gt;
+&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 4&lt;/h2&gt;
 &lt;p class=&quot;text-lg font-semibold mt-2 md:mt-0&quot; id=&quot;timer&quot;&gt;Time Remaining: &lt;span&gt;00:00&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- Question Content --&gt;
@@ -12158,11 +12248,21 @@
 &lt;/div&gt;
 &lt;!-- Navigation Buttons --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4&quot;&gt;
-&lt;button class=&quot;bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition w-full md:w-auto&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
-&lt;button class=&quot;bg-yellow-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-yellow-400 transition w-full md:w-auto&quot; id=&quot;mark-review&quot;&gt;Mark for Review&lt;/button&gt;
-&lt;button class=&quot;bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
-&lt;button class=&quot;bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition w-full md:w-auto&quot; id=&quot;nav-toggle&quot;&gt;Questions Navigation&lt;/button&gt;
-&lt;button class=&quot;bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
+&lt;div class=&quot;flex gap-2 w-full md:w-auto&quot;&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2&quot;&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;mark-review&quot;&gt;
+    Review
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-5 w-5&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;currentColor&quot;&gt;
+      &lt;path d=&quot;M10 2a1 1 0 00-1 1v14l3.293-3.293a1 1 0 011.414 0L17 17V3a1 1 0 00-1-1H10z&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;nav-toggle&quot;&gt;
+    Question 🧭
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-green-500 text-white px-6 py-3 w-44 h-14 rounded-lg hover:bg-green-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;
@@ -13434,7 +13534,7 @@
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;!-- Quiz Section --&gt;
-&lt;section class=&quot;container mx-auto p-4 md:p-6 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
+&lt;section class=&quot;container mx-auto px-4 md:px-6 pt-4 md:pt-6 pb-1 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
 &lt;div class=&quot;bg-white rounded-lg shadow-md p-4 md:p-6&quot;&gt;
 &lt;!-- Progress Bar --&gt;
 &lt;div class=&quot;w-full bg-gray-200 rounded-full h-3 mb-4&quot;&gt;
@@ -13442,7 +13542,7 @@
 &lt;/div&gt;
 &lt;!-- Question Header --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center mb-4&quot;&gt;
-&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 75&lt;/h2&gt;
+&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 4&lt;/h2&gt;
 &lt;p class=&quot;text-lg font-semibold mt-2 md:mt-0&quot; id=&quot;timer&quot;&gt;Time Remaining: &lt;span&gt;00:00&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- Question Content --&gt;
@@ -13453,11 +13553,21 @@
 &lt;/div&gt;
 &lt;!-- Navigation Buttons --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4&quot;&gt;
-&lt;button class=&quot;bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition w-full md:w-auto&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
-&lt;button class=&quot;bg-yellow-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-yellow-400 transition w-full md:w-auto&quot; id=&quot;mark-review&quot;&gt;Mark for Review&lt;/button&gt;
-&lt;button class=&quot;bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
-&lt;button class=&quot;bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition w-full md:w-auto&quot; id=&quot;nav-toggle&quot;&gt;Questions Navigation&lt;/button&gt;
-&lt;button class=&quot;bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
+&lt;div class=&quot;flex gap-2 w-full md:w-auto&quot;&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2&quot;&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;mark-review&quot;&gt;
+    Review
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-5 w-5&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;currentColor&quot;&gt;
+      &lt;path d=&quot;M10 2a1 1 0 00-1 1v14l3.293-3.293a1 1 0 011.414 0L17 17V3a1 1 0 00-1-1H10z&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;nav-toggle&quot;&gt;
+    Question 🧭
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-green-500 text-white px-6 py-3 w-44 h-14 rounded-lg hover:bg-green-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;
@@ -14729,7 +14839,7 @@
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;!-- Quiz Section --&gt;
-&lt;section class=&quot;container mx-auto p-4 md:p-6 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
+&lt;section class=&quot;container mx-auto px-4 md:px-6 pt-4 md:pt-6 pb-1 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
 &lt;div class=&quot;bg-white rounded-lg shadow-md p-4 md:p-6&quot;&gt;
 &lt;!-- Progress Bar --&gt;
 &lt;div class=&quot;w-full bg-gray-200 rounded-full h-3 mb-4&quot;&gt;
@@ -14737,7 +14847,7 @@
 &lt;/div&gt;
 &lt;!-- Question Header --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center mb-4&quot;&gt;
-&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 75&lt;/h2&gt;
+&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 4&lt;/h2&gt;
 &lt;p class=&quot;text-lg font-semibold mt-2 md:mt-0&quot; id=&quot;timer&quot;&gt;Time Remaining: &lt;span&gt;00:00&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- Question Content --&gt;
@@ -14748,11 +14858,21 @@
 &lt;/div&gt;
 &lt;!-- Navigation Buttons --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4&quot;&gt;
-&lt;button class=&quot;bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition w-full md:w-auto&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
-&lt;button class=&quot;bg-yellow-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-yellow-400 transition w-full md:w-auto&quot; id=&quot;mark-review&quot;&gt;Mark for Review&lt;/button&gt;
-&lt;button class=&quot;bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
-&lt;button class=&quot;bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition w-full md:w-auto&quot; id=&quot;nav-toggle&quot;&gt;Questions Navigation&lt;/button&gt;
-&lt;button class=&quot;bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
+&lt;div class=&quot;flex gap-2 w-full md:w-auto&quot;&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2&quot;&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;mark-review&quot;&gt;
+    Review
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-5 w-5&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;currentColor&quot;&gt;
+      &lt;path d=&quot;M10 2a1 1 0 00-1 1v14l3.293-3.293a1 1 0 011.414 0L17 17V3a1 1 0 00-1-1H10z&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;nav-toggle&quot;&gt;
+    Question 🧭
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-green-500 text-white px-6 py-3 w-44 h-14 rounded-lg hover:bg-green-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;
@@ -16024,7 +16144,7 @@
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;!-- Quiz Section --&gt;
-&lt;section class=&quot;container mx-auto p-4 md:p-6 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
+&lt;section class=&quot;container mx-auto px-4 md:px-6 pt-4 md:pt-6 pb-1 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
 &lt;div class=&quot;bg-white rounded-lg shadow-md p-4 md:p-6&quot;&gt;
 &lt;!-- Progress Bar --&gt;
 &lt;div class=&quot;w-full bg-gray-200 rounded-full h-3 mb-4&quot;&gt;
@@ -16032,7 +16152,7 @@
 &lt;/div&gt;
 &lt;!-- Question Header --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center mb-4&quot;&gt;
-&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 71&lt;/h2&gt;
+&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 4&lt;/h2&gt;
 &lt;p class=&quot;text-lg font-semibold mt-2 md:mt-0&quot; id=&quot;timer&quot;&gt;Time Remaining: &lt;span&gt;00:00&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- Question Content --&gt;
@@ -16043,11 +16163,21 @@
 &lt;/div&gt;
 &lt;!-- Navigation Buttons --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4&quot;&gt;
-&lt;button class=&quot;bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition w-full md:w-auto&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
-&lt;button class=&quot;bg-yellow-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-yellow-400 transition w-full md:w-auto&quot; id=&quot;mark-review&quot;&gt;Mark for Review&lt;/button&gt;
-&lt;button class=&quot;bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
-&lt;button class=&quot;bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition w-full md:w-auto&quot; id=&quot;nav-toggle&quot;&gt;Questions Navigation&lt;/button&gt;
-&lt;button class=&quot;bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
+&lt;div class=&quot;flex gap-2 w-full md:w-auto&quot;&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2&quot;&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;mark-review&quot;&gt;
+    Review
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-5 w-5&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;currentColor&quot;&gt;
+      &lt;path d=&quot;M10 2a1 1 0 00-1 1v14l3.293-3.293a1 1 0 011.414 0L17 17V3a1 1 0 00-1-1H10z&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;nav-toggle&quot;&gt;
+    Question 🧭
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-green-500 text-white px-6 py-3 w-44 h-14 rounded-lg hover:bg-green-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;
@@ -17319,7 +17449,7 @@
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;!-- Quiz Section --&gt;
-&lt;section class=&quot;container mx-auto p-4 md:p-6 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
+&lt;section class=&quot;container mx-auto px-4 md:px-6 pt-4 md:pt-6 pb-1 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
 &lt;div class=&quot;bg-white rounded-lg shadow-md p-4 md:p-6&quot;&gt;
 &lt;!-- Progress Bar --&gt;
 &lt;div class=&quot;w-full bg-gray-200 rounded-full h-3 mb-4&quot;&gt;
@@ -17327,7 +17457,7 @@
 &lt;/div&gt;
 &lt;!-- Question Header --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center mb-4&quot;&gt;
-&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 75&lt;/h2&gt;
+&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 4&lt;/h2&gt;
 &lt;p class=&quot;text-lg font-semibold mt-2 md:mt-0&quot; id=&quot;timer&quot;&gt;Time Remaining: &lt;span&gt;00:00&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- Question Content --&gt;
@@ -17338,11 +17468,21 @@
 &lt;/div&gt;
 &lt;!-- Navigation Buttons --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4&quot;&gt;
-&lt;button class=&quot;bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition w-full md:w-auto&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
-&lt;button class=&quot;bg-yellow-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-yellow-400 transition w-full md:w-auto&quot; id=&quot;mark-review&quot;&gt;Mark for Review&lt;/button&gt;
-&lt;button class=&quot;bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
-&lt;button class=&quot;bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition w-full md:w-auto&quot; id=&quot;nav-toggle&quot;&gt;Questions Navigation&lt;/button&gt;
-&lt;button class=&quot;bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
+&lt;div class=&quot;flex gap-2 w-full md:w-auto&quot;&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2&quot;&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;mark-review&quot;&gt;
+    Review
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-5 w-5&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;currentColor&quot;&gt;
+      &lt;path d=&quot;M10 2a1 1 0 00-1 1v14l3.293-3.293a1 1 0 011.414 0L17 17V3a1 1 0 00-1-1H10z&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;nav-toggle&quot;&gt;
+    Question 🧭
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-green-500 text-white px-6 py-3 w-44 h-14 rounded-lg hover:bg-green-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;
@@ -18614,7 +18754,7 @@
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;!-- Quiz Section --&gt;
-&lt;section class=&quot;container mx-auto p-4 md:p-6 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
+&lt;section class=&quot;container mx-auto px-4 md:px-6 pt-4 md:pt-6 pb-1 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
 &lt;div class=&quot;bg-white rounded-lg shadow-md p-4 md:p-6&quot;&gt;
 &lt;!-- Progress Bar --&gt;
 &lt;div class=&quot;w-full bg-gray-200 rounded-full h-3 mb-4&quot;&gt;
@@ -18622,7 +18762,7 @@
 &lt;/div&gt;
 &lt;!-- Question Header --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center mb-4&quot;&gt;
-&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 75&lt;/h2&gt;
+&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 4&lt;/h2&gt;
 &lt;p class=&quot;text-lg font-semibold mt-2 md:mt-0&quot; id=&quot;timer&quot;&gt;Time Remaining: &lt;span&gt;00:00&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- Question Content --&gt;
@@ -18633,11 +18773,21 @@
 &lt;/div&gt;
 &lt;!-- Navigation Buttons --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4&quot;&gt;
-&lt;button class=&quot;bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition w-full md:w-auto&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
-&lt;button class=&quot;bg-yellow-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-yellow-400 transition w-full md:w-auto&quot; id=&quot;mark-review&quot;&gt;Mark for Review&lt;/button&gt;
-&lt;button class=&quot;bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
-&lt;button class=&quot;bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition w-full md:w-auto&quot; id=&quot;nav-toggle&quot;&gt;Questions Navigation&lt;/button&gt;
-&lt;button class=&quot;bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
+&lt;div class=&quot;flex gap-2 w-full md:w-auto&quot;&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2&quot;&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;mark-review&quot;&gt;
+    Review
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-5 w-5&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;currentColor&quot;&gt;
+      &lt;path d=&quot;M10 2a1 1 0 00-1 1v14l3.293-3.293a1 1 0 011.414 0L17 17V3a1 1 0 00-1-1H10z&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;nav-toggle&quot;&gt;
+    Question 🧭
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-green-500 text-white px-6 py-3 w-44 h-14 rounded-lg hover:bg-green-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;
@@ -19909,7 +20059,7 @@
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;!-- Quiz Section --&gt;
-&lt;section class=&quot;container mx-auto p-4 md:p-6 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
+&lt;section class=&quot;container mx-auto px-4 md:px-6 pt-4 md:pt-6 pb-1 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
 &lt;div class=&quot;bg-white rounded-lg shadow-md p-4 md:p-6&quot;&gt;
 &lt;!-- Progress Bar --&gt;
 &lt;div class=&quot;w-full bg-gray-200 rounded-full h-3 mb-4&quot;&gt;
@@ -19917,7 +20067,7 @@
 &lt;/div&gt;
 &lt;!-- Question Header --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center mb-4&quot;&gt;
-&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 80&lt;/h2&gt;
+&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 4&lt;/h2&gt;
 &lt;p class=&quot;text-lg font-semibold mt-2 md:mt-0&quot; id=&quot;timer&quot;&gt;Time Remaining: &lt;span&gt;00:00&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- Question Content --&gt;
@@ -19928,11 +20078,21 @@
 &lt;/div&gt;
 &lt;!-- Navigation Buttons --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4&quot;&gt;
-&lt;button class=&quot;bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition w-full md:w-auto&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
-&lt;button class=&quot;bg-yellow-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-yellow-400 transition w-full md:w-auto&quot; id=&quot;mark-review&quot;&gt;Mark for Review&lt;/button&gt;
-&lt;button class=&quot;bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
-&lt;button class=&quot;bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition w-full md:w-auto&quot; id=&quot;nav-toggle&quot;&gt;Questions Navigation&lt;/button&gt;
-&lt;button class=&quot;bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
+&lt;div class=&quot;flex gap-2 w-full md:w-auto&quot;&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2&quot;&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;mark-review&quot;&gt;
+    Review
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-5 w-5&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;currentColor&quot;&gt;
+      &lt;path d=&quot;M10 2a1 1 0 00-1 1v14l3.293-3.293a1 1 0 011.414 0L17 17V3a1 1 0 00-1-1H10z&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;nav-toggle&quot;&gt;
+    Question 🧭
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-green-500 text-white px-6 py-3 w-44 h-14 rounded-lg hover:bg-green-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;
@@ -21204,7 +21364,7 @@
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;!-- Quiz Section --&gt;
-&lt;section class=&quot;container mx-auto p-4 md:p-6 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
+&lt;section class=&quot;container mx-auto px-4 md:px-6 pt-4 md:pt-6 pb-1 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
 &lt;div class=&quot;bg-white rounded-lg shadow-md p-4 md:p-6&quot;&gt;
 &lt;!-- Progress Bar --&gt;
 &lt;div class=&quot;w-full bg-gray-200 rounded-full h-3 mb-4&quot;&gt;
@@ -21212,7 +21372,7 @@
 &lt;/div&gt;
 &lt;!-- Question Header --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center mb-4&quot;&gt;
-&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 75&lt;/h2&gt;
+&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 4&lt;/h2&gt;
 &lt;p class=&quot;text-lg font-semibold mt-2 md:mt-0&quot; id=&quot;timer&quot;&gt;Time Remaining: &lt;span&gt;00:00&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- Question Content --&gt;
@@ -21223,11 +21383,21 @@
 &lt;/div&gt;
 &lt;!-- Navigation Buttons --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4&quot;&gt;
-&lt;button class=&quot;bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition w-full md:w-auto&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
-&lt;button class=&quot;bg-yellow-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-yellow-400 transition w-full md:w-auto&quot; id=&quot;mark-review&quot;&gt;Mark for Review&lt;/button&gt;
-&lt;button class=&quot;bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
-&lt;button class=&quot;bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition w-full md:w-auto&quot; id=&quot;nav-toggle&quot;&gt;Questions Navigation&lt;/button&gt;
-&lt;button class=&quot;bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
+&lt;div class=&quot;flex gap-2 w-full md:w-auto&quot;&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2&quot;&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;mark-review&quot;&gt;
+    Review
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-5 w-5&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;currentColor&quot;&gt;
+      &lt;path d=&quot;M10 2a1 1 0 00-1 1v14l3.293-3.293a1 1 0 011.414 0L17 17V3a1 1 0 00-1-1H10z&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;nav-toggle&quot;&gt;
+    Question 🧭
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-green-500 text-white px-6 py-3 w-44 h-14 rounded-lg hover:bg-green-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;
@@ -22499,7 +22669,7 @@
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;!-- Quiz Section --&gt;
-&lt;section class=&quot;container mx-auto p-4 md:p-6 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
+&lt;section class=&quot;container mx-auto px-4 md:px-6 pt-4 md:pt-6 pb-1 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
 &lt;div class=&quot;bg-white rounded-lg shadow-md p-4 md:p-6&quot;&gt;
 &lt;!-- Progress Bar --&gt;
 &lt;div class=&quot;w-full bg-gray-200 rounded-full h-3 mb-4&quot;&gt;
@@ -22507,7 +22677,7 @@
 &lt;/div&gt;
 &lt;!-- Question Header --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center mb-4&quot;&gt;
-&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 75&lt;/h2&gt;
+&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 4&lt;/h2&gt;
 &lt;p class=&quot;text-lg font-semibold mt-2 md:mt-0&quot; id=&quot;timer&quot;&gt;Time Remaining: &lt;span&gt;00:00&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- Question Content --&gt;
@@ -22518,11 +22688,21 @@
 &lt;/div&gt;
 &lt;!-- Navigation Buttons --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4&quot;&gt;
-&lt;button class=&quot;bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition w-full md:w-auto&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
-&lt;button class=&quot;bg-yellow-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-yellow-400 transition w-full md:w-auto&quot; id=&quot;mark-review&quot;&gt;Mark for Review&lt;/button&gt;
-&lt;button class=&quot;bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
-&lt;button class=&quot;bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition w-full md:w-auto&quot; id=&quot;nav-toggle&quot;&gt;Questions Navigation&lt;/button&gt;
-&lt;button class=&quot;bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
+&lt;div class=&quot;flex gap-2 w-full md:w-auto&quot;&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2&quot;&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;mark-review&quot;&gt;
+    Review
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-5 w-5&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;currentColor&quot;&gt;
+      &lt;path d=&quot;M10 2a1 1 0 00-1 1v14l3.293-3.293a1 1 0 011.414 0L17 17V3a1 1 0 00-1-1H10z&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;nav-toggle&quot;&gt;
+    Question 🧭
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-green-500 text-white px-6 py-3 w-44 h-14 rounded-lg hover:bg-green-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;
@@ -23794,7 +23974,7 @@
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;!-- Quiz Section --&gt;
-&lt;section class=&quot;container mx-auto p-4 md:p-6 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
+&lt;section class=&quot;container mx-auto px-4 md:px-6 pt-4 md:pt-6 pb-1 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
 &lt;div class=&quot;bg-white rounded-lg shadow-md p-4 md:p-6&quot;&gt;
 &lt;!-- Progress Bar --&gt;
 &lt;div class=&quot;w-full bg-gray-200 rounded-full h-3 mb-4&quot;&gt;
@@ -23802,7 +23982,7 @@
 &lt;/div&gt;
 &lt;!-- Question Header --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center mb-4&quot;&gt;
-&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 75&lt;/h2&gt;
+&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 4&lt;/h2&gt;
 &lt;p class=&quot;text-lg font-semibold mt-2 md:mt-0&quot; id=&quot;timer&quot;&gt;Time Remaining: &lt;span&gt;00:00&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- Question Content --&gt;
@@ -23813,11 +23993,21 @@
 &lt;/div&gt;
 &lt;!-- Navigation Buttons --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4&quot;&gt;
-&lt;button class=&quot;bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition w-full md:w-auto&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
-&lt;button class=&quot;bg-yellow-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-yellow-400 transition w-full md:w-auto&quot; id=&quot;mark-review&quot;&gt;Mark for Review&lt;/button&gt;
-&lt;button class=&quot;bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
-&lt;button class=&quot;bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition w-full md:w-auto&quot; id=&quot;nav-toggle&quot;&gt;Questions Navigation&lt;/button&gt;
-&lt;button class=&quot;bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
+&lt;div class=&quot;flex gap-2 w-full md:w-auto&quot;&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2&quot;&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;mark-review&quot;&gt;
+    Review
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-5 w-5&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;currentColor&quot;&gt;
+      &lt;path d=&quot;M10 2a1 1 0 00-1 1v14l3.293-3.293a1 1 0 011.414 0L17 17V3a1 1 0 00-1-1H10z&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;nav-toggle&quot;&gt;
+    Question 🧭
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-green-500 text-white px-6 py-3 w-44 h-14 rounded-lg hover:bg-green-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;
@@ -25089,7 +25279,7 @@
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;!-- Quiz Section --&gt;
-&lt;section class=&quot;container mx-auto p-4 md:p-6 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
+&lt;section class=&quot;container mx-auto px-4 md:px-6 pt-4 md:pt-6 pb-1 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
 &lt;div class=&quot;bg-white rounded-lg shadow-md p-4 md:p-6&quot;&gt;
 &lt;!-- Progress Bar --&gt;
 &lt;div class=&quot;w-full bg-gray-200 rounded-full h-3 mb-4&quot;&gt;
@@ -25097,7 +25287,7 @@
 &lt;/div&gt;
 &lt;!-- Question Header --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center mb-4&quot;&gt;
-&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 75&lt;/h2&gt;
+&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 4&lt;/h2&gt;
 &lt;p class=&quot;text-lg font-semibold mt-2 md:mt-0&quot; id=&quot;timer&quot;&gt;Time Remaining: &lt;span&gt;00:00&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- Question Content --&gt;
@@ -25108,11 +25298,21 @@
 &lt;/div&gt;
 &lt;!-- Navigation Buttons --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4&quot;&gt;
-&lt;button class=&quot;bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition w-full md:w-auto&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
-&lt;button class=&quot;bg-yellow-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-yellow-400 transition w-full md:w-auto&quot; id=&quot;mark-review&quot;&gt;Mark for Review&lt;/button&gt;
-&lt;button class=&quot;bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
-&lt;button class=&quot;bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition w-full md:w-auto&quot; id=&quot;nav-toggle&quot;&gt;Questions Navigation&lt;/button&gt;
-&lt;button class=&quot;bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
+&lt;div class=&quot;flex gap-2 w-full md:w-auto&quot;&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2&quot;&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;mark-review&quot;&gt;
+    Review
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-5 w-5&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;currentColor&quot;&gt;
+      &lt;path d=&quot;M10 2a1 1 0 00-1 1v14l3.293-3.293a1 1 0 011.414 0L17 17V3a1 1 0 00-1-1H10z&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;nav-toggle&quot;&gt;
+    Question 🧭
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-green-500 text-white px-6 py-3 w-44 h-14 rounded-lg hover:bg-green-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;
@@ -26384,7 +26584,7 @@
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;!-- Quiz Section --&gt;
-&lt;section class=&quot;container mx-auto p-4 md:p-6 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
+&lt;section class=&quot;container mx-auto px-4 md:px-6 pt-4 md:pt-6 pb-1 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
 &lt;div class=&quot;bg-white rounded-lg shadow-md p-4 md:p-6&quot;&gt;
 &lt;!-- Progress Bar --&gt;
 &lt;div class=&quot;w-full bg-gray-200 rounded-full h-3 mb-4&quot;&gt;
@@ -26392,7 +26592,7 @@
 &lt;/div&gt;
 &lt;!-- Question Header --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center mb-4&quot;&gt;
-&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 75&lt;/h2&gt;
+&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 4&lt;/h2&gt;
 &lt;p class=&quot;text-lg font-semibold mt-2 md:mt-0&quot; id=&quot;timer&quot;&gt;Time Remaining: &lt;span&gt;00:00&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- Question Content --&gt;
@@ -26403,11 +26603,21 @@
 &lt;/div&gt;
 &lt;!-- Navigation Buttons --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4&quot;&gt;
-&lt;button class=&quot;bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition w-full md:w-auto&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
-&lt;button class=&quot;bg-yellow-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-yellow-400 transition w-full md:w-auto&quot; id=&quot;mark-review&quot;&gt;Mark for Review&lt;/button&gt;
-&lt;button class=&quot;bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
-&lt;button class=&quot;bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition w-full md:w-auto&quot; id=&quot;nav-toggle&quot;&gt;Questions Navigation&lt;/button&gt;
-&lt;button class=&quot;bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
+&lt;div class=&quot;flex gap-2 w-full md:w-auto&quot;&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2&quot;&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;mark-review&quot;&gt;
+    Review
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-5 w-5&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;currentColor&quot;&gt;
+      &lt;path d=&quot;M10 2a1 1 0 00-1 1v14l3.293-3.293a1 1 0 011.414 0L17 17V3a1 1 0 00-1-1H10z&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;nav-toggle&quot;&gt;
+    Question 🧭
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-green-500 text-white px-6 py-3 w-44 h-14 rounded-lg hover:bg-green-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;
@@ -27679,7 +27889,7 @@
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;!-- Quiz Section --&gt;
-&lt;section class=&quot;container mx-auto p-4 md:p-6 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
+&lt;section class=&quot;container mx-auto px-4 md:px-6 pt-4 md:pt-6 pb-1 hidden section-transition&quot; id=&quot;quiz&quot;&gt;
 &lt;div class=&quot;bg-white rounded-lg shadow-md p-4 md:p-6&quot;&gt;
 &lt;!-- Progress Bar --&gt;
 &lt;div class=&quot;w-full bg-gray-200 rounded-full h-3 mb-4&quot;&gt;
@@ -27687,7 +27897,7 @@
 &lt;/div&gt;
 &lt;!-- Question Header --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center mb-4&quot;&gt;
-&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 75&lt;/h2&gt;
+&lt;h2 class=&quot;text-lg font-semibold&quot; id=&quot;question-number&quot;&gt;Question &lt;span&gt;1&lt;/span&gt; of 4&lt;/h2&gt;
 &lt;p class=&quot;text-lg font-semibold mt-2 md:mt-0&quot; id=&quot;timer&quot;&gt;Time Remaining: &lt;span&gt;00:00&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- Question Content --&gt;
@@ -27698,11 +27908,21 @@
 &lt;/div&gt;
 &lt;!-- Navigation Buttons --&gt;
 &lt;div class=&quot;flex flex-col md:flex-row justify-between items-center gap-2 md:gap-4&quot;&gt;
-&lt;button class=&quot;bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition w-full md:w-auto&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
-&lt;button class=&quot;bg-yellow-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-yellow-400 transition w-full md:w-auto&quot; id=&quot;mark-review&quot;&gt;Mark for Review&lt;/button&gt;
-&lt;button class=&quot;bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
-&lt;button class=&quot;bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition w-full md:w-auto&quot; id=&quot;nav-toggle&quot;&gt;Questions Navigation&lt;/button&gt;
-&lt;button class=&quot;bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
+&lt;div class=&quot;flex gap-2 w-full md:w-auto&quot;&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; disabled=&quot;&quot; id=&quot;previous-btn&quot;&gt;Previous&lt;/button&gt;
+  &lt;button class=&quot;bg-[#2c5281] text-white px-4 py-3 w-full md:w-32 h-14 rounded-lg hover:bg-[#2c5281] transition&quot; id=&quot;next-btn&quot;&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex items-center gap-2&quot;&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;mark-review&quot;&gt;
+    Review
+    &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-5 w-5&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;currentColor&quot;&gt;
+      &lt;path d=&quot;M10 2a1 1 0 00-1 1v14l3.293-3.293a1 1 0 011.414 0L17 17V3a1 1 0 00-1-1H10z&quot; /&gt;
+    &lt;/svg&gt;
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-transparent text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition flex items-center gap-1&quot; id=&quot;nav-toggle&quot;&gt;
+    Question 🧭
+  &lt;/button&gt;
+  &lt;button class=&quot;bg-green-500 text-white px-6 py-3 w-44 h-14 rounded-lg hover:bg-green-600 transition w-full md:w-auto&quot; id=&quot;submit-test&quot;&gt;Submit Test&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;
