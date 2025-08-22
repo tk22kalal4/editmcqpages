@@ -801,6 +801,7 @@
             }
         }
         // Show question
+                // Show question
         function showQuestion(index) {
             try {
                 debugLog(`Showing question ${index + 1}`);
@@ -818,8 +819,8 @@
                 const optionsDiv = document.getElementById(&#x27;options&#x27;);
                 optionsDiv.innerHTML = q.options &amp;&amp; q.options.length &gt; 0
                     ? q.options.map(opt =&gt; `
-                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot;
+                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot; 
+                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot; 
                                 aria-label=&quot;Option ${opt.label}: ${opt.text}&quot;&gt;
                             ${opt.label}. ${opt.text}
                         &lt;/button&gt;
@@ -836,6 +837,7 @@
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
+        }
         }
         // Select option
         function selectOption(index, label) {
@@ -2112,6 +2114,7 @@
             }
         }
         // Show question
+                // Show question
         function showQuestion(index) {
             try {
                 debugLog(`Showing question ${index + 1}`);
@@ -2129,8 +2132,8 @@
                 const optionsDiv = document.getElementById(&#x27;options&#x27;);
                 optionsDiv.innerHTML = q.options &amp;&amp; q.options.length &gt; 0
                     ? q.options.map(opt =&gt; `
-                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot;
+                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot; 
+                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot; 
                                 aria-label=&quot;Option ${opt.label}: ${opt.text}&quot;&gt;
                             ${opt.label}. ${opt.text}
                         &lt;/button&gt;
@@ -2147,6 +2150,7 @@
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
+        }
         }
         // Select option
         function selectOption(index, label) {
@@ -3423,6 +3427,7 @@
             }
         }
         // Show question
+                // Show question
         function showQuestion(index) {
             try {
                 debugLog(`Showing question ${index + 1}`);
@@ -3440,8 +3445,8 @@
                 const optionsDiv = document.getElementById(&#x27;options&#x27;);
                 optionsDiv.innerHTML = q.options &amp;&amp; q.options.length &gt; 0
                     ? q.options.map(opt =&gt; `
-                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot;
+                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot; 
+                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot; 
                                 aria-label=&quot;Option ${opt.label}: ${opt.text}&quot;&gt;
                             ${opt.label}. ${opt.text}
                         &lt;/button&gt;
@@ -3458,6 +3463,7 @@
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
+        }
         }
         // Select option
         function selectOption(index, label) {
@@ -4734,6 +4740,7 @@
             }
         }
         // Show question
+                // Show question
         function showQuestion(index) {
             try {
                 debugLog(`Showing question ${index + 1}`);
@@ -4751,8 +4758,8 @@
                 const optionsDiv = document.getElementById(&#x27;options&#x27;);
                 optionsDiv.innerHTML = q.options &amp;&amp; q.options.length &gt; 0
                     ? q.options.map(opt =&gt; `
-                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot;
+                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot; 
+                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot; 
                                 aria-label=&quot;Option ${opt.label}: ${opt.text}&quot;&gt;
                             ${opt.label}. ${opt.text}
                         &lt;/button&gt;
@@ -4769,6 +4776,7 @@
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
+        }
         }
         // Select option
         function selectOption(index, label) {
@@ -6045,6 +6053,7 @@
             }
         }
         // Show question
+                // Show question
         function showQuestion(index) {
             try {
                 debugLog(`Showing question ${index + 1}`);
@@ -6062,8 +6071,8 @@
                 const optionsDiv = document.getElementById(&#x27;options&#x27;);
                 optionsDiv.innerHTML = q.options &amp;&amp; q.options.length &gt; 0
                     ? q.options.map(opt =&gt; `
-                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot;
+                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot; 
+                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot; 
                                 aria-label=&quot;Option ${opt.label}: ${opt.text}&quot;&gt;
                             ${opt.label}. ${opt.text}
                         &lt;/button&gt;
@@ -6080,6 +6089,7 @@
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
+        }
         }
         // Select option
         function selectOption(index, label) {
@@ -7356,6 +7366,7 @@
             }
         }
         // Show question
+                // Show question
         function showQuestion(index) {
             try {
                 debugLog(`Showing question ${index + 1}`);
@@ -7373,8 +7384,8 @@
                 const optionsDiv = document.getElementById(&#x27;options&#x27;);
                 optionsDiv.innerHTML = q.options &amp;&amp; q.options.length &gt; 0
                     ? q.options.map(opt =&gt; `
-                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot;
+                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot; 
+                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot; 
                                 aria-label=&quot;Option ${opt.label}: ${opt.text}&quot;&gt;
                             ${opt.label}. ${opt.text}
                         &lt;/button&gt;
@@ -7391,6 +7402,7 @@
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
+        }
         }
         // Select option
         function selectOption(index, label) {
@@ -8667,6 +8679,7 @@
             }
         }
         // Show question
+                // Show question
         function showQuestion(index) {
             try {
                 debugLog(`Showing question ${index + 1}`);
@@ -8684,8 +8697,8 @@
                 const optionsDiv = document.getElementById(&#x27;options&#x27;);
                 optionsDiv.innerHTML = q.options &amp;&amp; q.options.length &gt; 0
                     ? q.options.map(opt =&gt; `
-                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot;
+                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot; 
+                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot; 
                                 aria-label=&quot;Option ${opt.label}: ${opt.text}&quot;&gt;
                             ${opt.label}. ${opt.text}
                         &lt;/button&gt;
@@ -8702,6 +8715,7 @@
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
+        }
         }
         // Select option
         function selectOption(index, label) {
@@ -9978,6 +9992,7 @@
             }
         }
         // Show question
+                // Show question
         function showQuestion(index) {
             try {
                 debugLog(`Showing question ${index + 1}`);
@@ -9995,8 +10010,8 @@
                 const optionsDiv = document.getElementById(&#x27;options&#x27;);
                 optionsDiv.innerHTML = q.options &amp;&amp; q.options.length &gt; 0
                     ? q.options.map(opt =&gt; `
-                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot;
+                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot; 
+                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot; 
                                 aria-label=&quot;Option ${opt.label}: ${opt.text}&quot;&gt;
                             ${opt.label}. ${opt.text}
                         &lt;/button&gt;
@@ -10013,6 +10028,7 @@
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
+        }
         }
         // Select option
         function selectOption(index, label) {
@@ -11289,6 +11305,7 @@
             }
         }
         // Show question
+                // Show question
         function showQuestion(index) {
             try {
                 debugLog(`Showing question ${index + 1}`);
@@ -11306,8 +11323,8 @@
                 const optionsDiv = document.getElementById(&#x27;options&#x27;);
                 optionsDiv.innerHTML = q.options &amp;&amp; q.options.length &gt; 0
                     ? q.options.map(opt =&gt; `
-                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot;
+                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot; 
+                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot; 
                                 aria-label=&quot;Option ${opt.label}: ${opt.text}&quot;&gt;
                             ${opt.label}. ${opt.text}
                         &lt;/button&gt;
@@ -11324,6 +11341,7 @@
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
+        }
         }
         // Select option
         function selectOption(index, label) {
@@ -12600,6 +12618,7 @@
             }
         }
         // Show question
+                // Show question
         function showQuestion(index) {
             try {
                 debugLog(`Showing question ${index + 1}`);
@@ -12617,8 +12636,8 @@
                 const optionsDiv = document.getElementById(&#x27;options&#x27;);
                 optionsDiv.innerHTML = q.options &amp;&amp; q.options.length &gt; 0
                     ? q.options.map(opt =&gt; `
-                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot;
+                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot; 
+                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot; 
                                 aria-label=&quot;Option ${opt.label}: ${opt.text}&quot;&gt;
                             ${opt.label}. ${opt.text}
                         &lt;/button&gt;
@@ -12635,6 +12654,7 @@
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
+        }
         }
         // Select option
         function selectOption(index, label) {
@@ -13911,6 +13931,7 @@
             }
         }
         // Show question
+                // Show question
         function showQuestion(index) {
             try {
                 debugLog(`Showing question ${index + 1}`);
@@ -13928,8 +13949,8 @@
                 const optionsDiv = document.getElementById(&#x27;options&#x27;);
                 optionsDiv.innerHTML = q.options &amp;&amp; q.options.length &gt; 0
                     ? q.options.map(opt =&gt; `
-                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot;
+                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot; 
+                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot; 
                                 aria-label=&quot;Option ${opt.label}: ${opt.text}&quot;&gt;
                             ${opt.label}. ${opt.text}
                         &lt;/button&gt;
@@ -13946,6 +13967,7 @@
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
+        }
         }
         // Select option
         function selectOption(index, label) {
@@ -15222,6 +15244,7 @@
             }
         }
         // Show question
+                // Show question
         function showQuestion(index) {
             try {
                 debugLog(`Showing question ${index + 1}`);
@@ -15239,8 +15262,8 @@
                 const optionsDiv = document.getElementById(&#x27;options&#x27;);
                 optionsDiv.innerHTML = q.options &amp;&amp; q.options.length &gt; 0
                     ? q.options.map(opt =&gt; `
-                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot;
+                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot; 
+                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot; 
                                 aria-label=&quot;Option ${opt.label}: ${opt.text}&quot;&gt;
                             ${opt.label}. ${opt.text}
                         &lt;/button&gt;
@@ -15257,6 +15280,7 @@
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
+        }
         }
         // Select option
         function selectOption(index, label) {
@@ -16533,6 +16557,7 @@
             }
         }
         // Show question
+                // Show question
         function showQuestion(index) {
             try {
                 debugLog(`Showing question ${index + 1}`);
@@ -16550,8 +16575,8 @@
                 const optionsDiv = document.getElementById(&#x27;options&#x27;);
                 optionsDiv.innerHTML = q.options &amp;&amp; q.options.length &gt; 0
                     ? q.options.map(opt =&gt; `
-                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot;
+                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot; 
+                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot; 
                                 aria-label=&quot;Option ${opt.label}: ${opt.text}&quot;&gt;
                             ${opt.label}. ${opt.text}
                         &lt;/button&gt;
@@ -16568,6 +16593,7 @@
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
+        }
         }
         // Select option
         function selectOption(index, label) {
@@ -17844,6 +17870,7 @@
             }
         }
         // Show question
+                // Show question
         function showQuestion(index) {
             try {
                 debugLog(`Showing question ${index + 1}`);
@@ -17861,8 +17888,8 @@
                 const optionsDiv = document.getElementById(&#x27;options&#x27;);
                 optionsDiv.innerHTML = q.options &amp;&amp; q.options.length &gt; 0
                     ? q.options.map(opt =&gt; `
-                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot;
+                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot; 
+                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot; 
                                 aria-label=&quot;Option ${opt.label}: ${opt.text}&quot;&gt;
                             ${opt.label}. ${opt.text}
                         &lt;/button&gt;
@@ -17879,6 +17906,7 @@
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
+        }
         }
         // Select option
         function selectOption(index, label) {
@@ -19155,6 +19183,7 @@
             }
         }
         // Show question
+                // Show question
         function showQuestion(index) {
             try {
                 debugLog(`Showing question ${index + 1}`);
@@ -19172,8 +19201,8 @@
                 const optionsDiv = document.getElementById(&#x27;options&#x27;);
                 optionsDiv.innerHTML = q.options &amp;&amp; q.options.length &gt; 0
                     ? q.options.map(opt =&gt; `
-                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot;
+                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot; 
+                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot; 
                                 aria-label=&quot;Option ${opt.label}: ${opt.text}&quot;&gt;
                             ${opt.label}. ${opt.text}
                         &lt;/button&gt;
@@ -19190,6 +19219,7 @@
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
+        }
         }
         // Select option
         function selectOption(index, label) {
@@ -20466,6 +20496,7 @@
             }
         }
         // Show question
+                // Show question
         function showQuestion(index) {
             try {
                 debugLog(`Showing question ${index + 1}`);
@@ -20483,8 +20514,8 @@
                 const optionsDiv = document.getElementById(&#x27;options&#x27;);
                 optionsDiv.innerHTML = q.options &amp;&amp; q.options.length &gt; 0
                     ? q.options.map(opt =&gt; `
-                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot;
+                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot; 
+                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot; 
                                 aria-label=&quot;Option ${opt.label}: ${opt.text}&quot;&gt;
                             ${opt.label}. ${opt.text}
                         &lt;/button&gt;
@@ -20501,6 +20532,7 @@
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
+        }
         }
         // Select option
         function selectOption(index, label) {
@@ -21777,6 +21809,7 @@
             }
         }
         // Show question
+                // Show question
         function showQuestion(index) {
             try {
                 debugLog(`Showing question ${index + 1}`);
@@ -21794,8 +21827,8 @@
                 const optionsDiv = document.getElementById(&#x27;options&#x27;);
                 optionsDiv.innerHTML = q.options &amp;&amp; q.options.length &gt; 0
                     ? q.options.map(opt =&gt; `
-                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot;
+                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot; 
+                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot; 
                                 aria-label=&quot;Option ${opt.label}: ${opt.text}&quot;&gt;
                             ${opt.label}. ${opt.text}
                         &lt;/button&gt;
@@ -21812,6 +21845,7 @@
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
+        }
         }
         // Select option
         function selectOption(index, label) {
@@ -23088,6 +23122,7 @@
             }
         }
         // Show question
+                // Show question
         function showQuestion(index) {
             try {
                 debugLog(`Showing question ${index + 1}`);
@@ -23105,8 +23140,8 @@
                 const optionsDiv = document.getElementById(&#x27;options&#x27;);
                 optionsDiv.innerHTML = q.options &amp;&amp; q.options.length &gt; 0
                     ? q.options.map(opt =&gt; `
-                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot;
+                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot; 
+                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot; 
                                 aria-label=&quot;Option ${opt.label}: ${opt.text}&quot;&gt;
                             ${opt.label}. ${opt.text}
                         &lt;/button&gt;
@@ -23123,6 +23158,7 @@
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
+        }
         }
         // Select option
         function selectOption(index, label) {
@@ -24399,6 +24435,7 @@
             }
         }
         // Show question
+                // Show question
         function showQuestion(index) {
             try {
                 debugLog(`Showing question ${index + 1}`);
@@ -24416,8 +24453,8 @@
                 const optionsDiv = document.getElementById(&#x27;options&#x27;);
                 optionsDiv.innerHTML = q.options &amp;&amp; q.options.length &gt; 0
                     ? q.options.map(opt =&gt; `
-                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot;
+                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot; 
+                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot; 
                                 aria-label=&quot;Option ${opt.label}: ${opt.text}&quot;&gt;
                             ${opt.label}. ${opt.text}
                         &lt;/button&gt;
@@ -24434,6 +24471,7 @@
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
+        }
         }
         // Select option
         function selectOption(index, label) {
@@ -25710,6 +25748,7 @@
             }
         }
         // Show question
+                // Show question
         function showQuestion(index) {
             try {
                 debugLog(`Showing question ${index + 1}`);
@@ -25727,8 +25766,8 @@
                 const optionsDiv = document.getElementById(&#x27;options&#x27;);
                 optionsDiv.innerHTML = q.options &amp;&amp; q.options.length &gt; 0
                     ? q.options.map(opt =&gt; `
-                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot;
+                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot; 
+                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot; 
                                 aria-label=&quot;Option ${opt.label}: ${opt.text}&quot;&gt;
                             ${opt.label}. ${opt.text}
                         &lt;/button&gt;
@@ -25745,6 +25784,7 @@
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
+        }
         }
         // Select option
         function selectOption(index, label) {
@@ -27021,6 +27061,7 @@
             }
         }
         // Show question
+                // Show question
         function showQuestion(index) {
             try {
                 debugLog(`Showing question ${index + 1}`);
@@ -27038,8 +27079,8 @@
                 const optionsDiv = document.getElementById(&#x27;options&#x27;);
                 optionsDiv.innerHTML = q.options &amp;&amp; q.options.length &gt; 0
                     ? q.options.map(opt =&gt; `
-                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot;
+                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot; 
+                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot; 
                                 aria-label=&quot;Option ${opt.label}: ${opt.text}&quot;&gt;
                             ${opt.label}. ${opt.text}
                         &lt;/button&gt;
@@ -27056,6 +27097,7 @@
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
+        }
         }
         // Select option
         function selectOption(index, label) {
@@ -28332,6 +28374,7 @@
             }
         }
         // Show question
+                // Show question
         function showQuestion(index) {
             try {
                 debugLog(`Showing question ${index + 1}`);
@@ -28349,8 +28392,8 @@
                 const optionsDiv = document.getElementById(&#x27;options&#x27;);
                 optionsDiv.innerHTML = q.options &amp;&amp; q.options.length &gt; 0
                     ? q.options.map(opt =&gt; `
-                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot;
+                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot; 
+                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot; 
                                 aria-label=&quot;Option ${opt.label}: ${opt.text}&quot;&gt;
                             ${opt.label}. ${opt.text}
                         &lt;/button&gt;
@@ -28367,6 +28410,7 @@
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
+        }
         }
         // Select option
         function selectOption(index, label) {
@@ -29643,6 +29687,7 @@
             }
         }
         // Show question
+                // Show question
         function showQuestion(index) {
             try {
                 debugLog(`Showing question ${index + 1}`);
@@ -29660,8 +29705,8 @@
                 const optionsDiv = document.getElementById(&#x27;options&#x27;);
                 optionsDiv.innerHTML = q.options &amp;&amp; q.options.length &gt; 0
                     ? q.options.map(opt =&gt; `
-                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot;
+                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot; 
+                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot; 
                                 aria-label=&quot;Option ${opt.label}: ${opt.text}&quot;&gt;
                             ${opt.label}. ${opt.text}
                         &lt;/button&gt;
@@ -29678,6 +29723,7 @@
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
+        }
         }
         // Select option
         function selectOption(index, label) {
@@ -30954,6 +31000,7 @@
             }
         }
         // Show question
+                // Show question
         function showQuestion(index) {
             try {
                 debugLog(`Showing question ${index + 1}`);
@@ -30971,8 +31018,8 @@
                 const optionsDiv = document.getElementById(&#x27;options&#x27;);
                 optionsDiv.innerHTML = q.options &amp;&amp; q.options.length &gt; 0
                     ? q.options.map(opt =&gt; `
-                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot;
-                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot;
+                        &lt;button class=&quot;option-btn w-full text-left p-3 border rounded-lg ${answers[index] === opt.label ? &#x27;selected&#x27; : &#x27;&#x27;}&quot; 
+                                onclick=&quot;selectOption(${index}, &#x27;${opt.label}&#x27;)&quot; 
                                 aria-label=&quot;Option ${opt.label}: ${opt.text}&quot;&gt;
                             ${opt.label}. ${opt.text}
                         &lt;/button&gt;
@@ -30989,6 +31036,7 @@
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
             }
+        }
         }
         // Select option
         function selectOption(index, label) {
