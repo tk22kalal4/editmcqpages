@@ -175,7 +175,8 @@
   
   <div class="dropdown-wrapper">
   <button class="dropdown-toggle" id="dropdownToggle" onclick="toggleDropdown()">☰ INDEX</button>
-  <div class="dropdown-menu" id="dropdownMenu"><button onclick="showTest('test1')">Bacteriology_Part-1</button>
+  <div class="dropdown-menu" id="dropdownMenu">
+    <button onclick="showTest('test1')">Bacteriology_Part-1</button>
 <button onclick="showTest('test2')">Bacteriology_Part-2</button>
 <button onclick="showTest('test3')">General_Microbiology</button>
 <button onclick="showTest('test4')">Immunology</button>
@@ -700,19 +701,17 @@
                 document.getElementById(&#x27;continue-test&#x27;).addEventListener(&#x27;click&#x27;, closeExitModal);
                 document.getElementById(&#x27;exit-test&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
                     debugLog(&quot;Exiting test&quot;);
-                    localStorage.removeItem(`quiz_`);
+                    localStorage.removeItem(`quiz_${quizId}`);
                     window.location.reload();
                 });
                 document.getElementById(&#x27;cancel-submit&#x27;).addEventListener(&#x27;click&#x27;, closeSubmitModal);
                 document.getElementById(&#x27;confirm-submit&#x27;).addEventListener(&#x27;click&#x27;, submitTest);
                 document.getElementById(&#x27;take-again&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
                     debugLog(&quot;Restarting test&quot;);
-                    localStorage.removeItem(`quiz_`);
+                    localStorage.removeItem(`quiz_${quizId}`);
                     window.location.reload();
                 });
-                document.getElementById(&#x27;review-test&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; showResults(currentResultQuestion));
                 document.getElementById(&#x27;close-nav&#x27;).addEventListener(&#x27;click&#x27;, toggleNavPanel);
-                document.getElementById(&#x27;theme-toggle&#x27;).addEventListener(&#x27;click&#x27;, toggleTheme);
                 document.getElementById(&#x27;nav-filter&#x27;).addEventListener(&#x27;change&#x27;, updateNavPanel);
                 document.getElementById(&#x27;prev-result&#x27;).addEventListener(&#x27;click&#x27;, showPreviousResult);
                 document.getElementById(&#x27;next-result&#x27;).addEventListener(&#x27;click&#x27;, showNextResult);
@@ -7774,4 +7773,5 @@
 
 </body>
 </html>
+
 
