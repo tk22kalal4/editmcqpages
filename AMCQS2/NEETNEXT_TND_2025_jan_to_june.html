@@ -836,8 +836,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
-            }
-        }
+            
         }
         // Select option
         function selectOption(index, label) {
@@ -1175,8 +1174,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying result:&quot;, e);
                 debugLog(&quot;Failed to display result: &quot; + e.message);
-            }
-        }
+            
         }
         // Lazy-load and play video
         function loadVideo(button, videoUrl, containerId) {
@@ -1395,9 +1393,8 @@
                                         debugLog(&quot;Failed to play video: &quot; + e.message);
                                     });
                                     debugLog(`Played existing video for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No video available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No video available`;
@@ -1422,9 +1419,8 @@
                                         debugLog(&quot;Failed to play audio: &quot; + e.message);
                                     });
                                     debugLog(`Played existing audio for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No audio available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No audio available`;
@@ -1432,9 +1428,8 @@
                             setTimeout(() =&gt; {
                                 overlay.style.display = &#x27;none&#x27;;
                             }, 2000);
-                        }
-                    }
-                }
+                        
+        }
                 // Handle question number input with Ctrl
                 if (digitKeys.includes(key) &amp;&amp; e.ctrlKey) {
                     e.preventDefault();
@@ -1491,9 +1486,8 @@
                         e.preventDefault();
                         closeExitModal();
                         debugLog(&quot;Closed exit modal via Escape&quot;);
-                    }
-                }
-            } catch (e) {
+                    
+        } catch (e) {
                 console.error(&quot;Error in modal keydown handler:&quot;, e);
                 debugLog(&quot;Failed in modal keydown handler: &quot; + e.message);
             }
@@ -2151,8 +2145,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
-            }
-        }
+            
         }
         // Select option
         function selectOption(index, label) {
@@ -2490,8 +2483,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying result:&quot;, e);
                 debugLog(&quot;Failed to display result: &quot; + e.message);
-            }
-        }
+            
         }
         // Lazy-load and play video
         function loadVideo(button, videoUrl, containerId) {
@@ -2710,9 +2702,8 @@
                                         debugLog(&quot;Failed to play video: &quot; + e.message);
                                     });
                                     debugLog(`Played existing video for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No video available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No video available`;
@@ -2737,9 +2728,8 @@
                                         debugLog(&quot;Failed to play audio: &quot; + e.message);
                                     });
                                     debugLog(`Played existing audio for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No audio available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No audio available`;
@@ -2747,9 +2737,8 @@
                             setTimeout(() =&gt; {
                                 overlay.style.display = &#x27;none&#x27;;
                             }, 2000);
-                        }
-                    }
-                }
+                        
+        }
                 // Handle question number input with Ctrl
                 if (digitKeys.includes(key) &amp;&amp; e.ctrlKey) {
                     e.preventDefault();
@@ -2806,9 +2795,8 @@
                         e.preventDefault();
                         closeExitModal();
                         debugLog(&quot;Closed exit modal via Escape&quot;);
-                    }
-                }
-            } catch (e) {
+                    
+        } catch (e) {
                 console.error(&quot;Error in modal keydown handler:&quot;, e);
                 debugLog(&quot;Failed in modal keydown handler: &quot; + e.message);
             }
@@ -3466,8 +3454,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
-            }
-        }
+            
         }
         // Select option
         function selectOption(index, label) {
@@ -3805,8 +3792,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying result:&quot;, e);
                 debugLog(&quot;Failed to display result: &quot; + e.message);
-            }
-        }
+            
         }
         // Lazy-load and play video
         function loadVideo(button, videoUrl, containerId) {
@@ -4025,9 +4011,8 @@
                                         debugLog(&quot;Failed to play video: &quot; + e.message);
                                     });
                                     debugLog(`Played existing video for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No video available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No video available`;
@@ -4052,9 +4037,8 @@
                                         debugLog(&quot;Failed to play audio: &quot; + e.message);
                                     });
                                     debugLog(`Played existing audio for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No audio available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No audio available`;
@@ -4062,9 +4046,8 @@
                             setTimeout(() =&gt; {
                                 overlay.style.display = &#x27;none&#x27;;
                             }, 2000);
-                        }
-                    }
-                }
+                        
+        }
                 // Handle question number input with Ctrl
                 if (digitKeys.includes(key) &amp;&amp; e.ctrlKey) {
                     e.preventDefault();
@@ -4121,9 +4104,8 @@
                         e.preventDefault();
                         closeExitModal();
                         debugLog(&quot;Closed exit modal via Escape&quot;);
-                    }
-                }
-            } catch (e) {
+                    
+        } catch (e) {
                 console.error(&quot;Error in modal keydown handler:&quot;, e);
                 debugLog(&quot;Failed in modal keydown handler: &quot; + e.message);
             }
@@ -4781,8 +4763,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
-            }
-        }
+            
         }
         // Select option
         function selectOption(index, label) {
@@ -5120,8 +5101,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying result:&quot;, e);
                 debugLog(&quot;Failed to display result: &quot; + e.message);
-            }
-        }
+            
         }
         // Lazy-load and play video
         function loadVideo(button, videoUrl, containerId) {
@@ -5340,9 +5320,8 @@
                                         debugLog(&quot;Failed to play video: &quot; + e.message);
                                     });
                                     debugLog(`Played existing video for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No video available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No video available`;
@@ -5367,9 +5346,8 @@
                                         debugLog(&quot;Failed to play audio: &quot; + e.message);
                                     });
                                     debugLog(`Played existing audio for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No audio available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No audio available`;
@@ -5377,9 +5355,8 @@
                             setTimeout(() =&gt; {
                                 overlay.style.display = &#x27;none&#x27;;
                             }, 2000);
-                        }
-                    }
-                }
+                        
+        }
                 // Handle question number input with Ctrl
                 if (digitKeys.includes(key) &amp;&amp; e.ctrlKey) {
                     e.preventDefault();
@@ -5436,9 +5413,8 @@
                         e.preventDefault();
                         closeExitModal();
                         debugLog(&quot;Closed exit modal via Escape&quot;);
-                    }
-                }
-            } catch (e) {
+                    
+        } catch (e) {
                 console.error(&quot;Error in modal keydown handler:&quot;, e);
                 debugLog(&quot;Failed in modal keydown handler: &quot; + e.message);
             }
@@ -6096,8 +6072,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
-            }
-        }
+            
         }
         // Select option
         function selectOption(index, label) {
@@ -6435,8 +6410,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying result:&quot;, e);
                 debugLog(&quot;Failed to display result: &quot; + e.message);
-            }
-        }
+            
         }
         // Lazy-load and play video
         function loadVideo(button, videoUrl, containerId) {
@@ -6655,9 +6629,8 @@
                                         debugLog(&quot;Failed to play video: &quot; + e.message);
                                     });
                                     debugLog(`Played existing video for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No video available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No video available`;
@@ -6682,9 +6655,8 @@
                                         debugLog(&quot;Failed to play audio: &quot; + e.message);
                                     });
                                     debugLog(`Played existing audio for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No audio available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No audio available`;
@@ -6692,9 +6664,8 @@
                             setTimeout(() =&gt; {
                                 overlay.style.display = &#x27;none&#x27;;
                             }, 2000);
-                        }
-                    }
-                }
+                        
+        }
                 // Handle question number input with Ctrl
                 if (digitKeys.includes(key) &amp;&amp; e.ctrlKey) {
                     e.preventDefault();
@@ -6751,9 +6722,8 @@
                         e.preventDefault();
                         closeExitModal();
                         debugLog(&quot;Closed exit modal via Escape&quot;);
-                    }
-                }
-            } catch (e) {
+                    
+        } catch (e) {
                 console.error(&quot;Error in modal keydown handler:&quot;, e);
                 debugLog(&quot;Failed in modal keydown handler: &quot; + e.message);
             }
@@ -7411,8 +7381,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
-            }
-        }
+            
         }
         // Select option
         function selectOption(index, label) {
@@ -7750,8 +7719,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying result:&quot;, e);
                 debugLog(&quot;Failed to display result: &quot; + e.message);
-            }
-        }
+            
         }
         // Lazy-load and play video
         function loadVideo(button, videoUrl, containerId) {
@@ -7970,9 +7938,8 @@
                                         debugLog(&quot;Failed to play video: &quot; + e.message);
                                     });
                                     debugLog(`Played existing video for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No video available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No video available`;
@@ -7997,9 +7964,8 @@
                                         debugLog(&quot;Failed to play audio: &quot; + e.message);
                                     });
                                     debugLog(`Played existing audio for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No audio available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No audio available`;
@@ -8007,9 +7973,8 @@
                             setTimeout(() =&gt; {
                                 overlay.style.display = &#x27;none&#x27;;
                             }, 2000);
-                        }
-                    }
-                }
+                        
+        }
                 // Handle question number input with Ctrl
                 if (digitKeys.includes(key) &amp;&amp; e.ctrlKey) {
                     e.preventDefault();
@@ -8066,9 +8031,8 @@
                         e.preventDefault();
                         closeExitModal();
                         debugLog(&quot;Closed exit modal via Escape&quot;);
-                    }
-                }
-            } catch (e) {
+                    
+        } catch (e) {
                 console.error(&quot;Error in modal keydown handler:&quot;, e);
                 debugLog(&quot;Failed in modal keydown handler: &quot; + e.message);
             }
@@ -8726,8 +8690,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
-            }
-        }
+            
         }
         // Select option
         function selectOption(index, label) {
@@ -9065,8 +9028,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying result:&quot;, e);
                 debugLog(&quot;Failed to display result: &quot; + e.message);
-            }
-        }
+            
         }
         // Lazy-load and play video
         function loadVideo(button, videoUrl, containerId) {
@@ -9285,9 +9247,8 @@
                                         debugLog(&quot;Failed to play video: &quot; + e.message);
                                     });
                                     debugLog(`Played existing video for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No video available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No video available`;
@@ -9312,9 +9273,8 @@
                                         debugLog(&quot;Failed to play audio: &quot; + e.message);
                                     });
                                     debugLog(`Played existing audio for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No audio available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No audio available`;
@@ -9322,9 +9282,8 @@
                             setTimeout(() =&gt; {
                                 overlay.style.display = &#x27;none&#x27;;
                             }, 2000);
-                        }
-                    }
-                }
+                        
+        }
                 // Handle question number input with Ctrl
                 if (digitKeys.includes(key) &amp;&amp; e.ctrlKey) {
                     e.preventDefault();
@@ -9381,9 +9340,8 @@
                         e.preventDefault();
                         closeExitModal();
                         debugLog(&quot;Closed exit modal via Escape&quot;);
-                    }
-                }
-            } catch (e) {
+                    
+        } catch (e) {
                 console.error(&quot;Error in modal keydown handler:&quot;, e);
                 debugLog(&quot;Failed in modal keydown handler: &quot; + e.message);
             }
@@ -10041,8 +9999,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
-            }
-        }
+            
         }
         // Select option
         function selectOption(index, label) {
@@ -10380,8 +10337,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying result:&quot;, e);
                 debugLog(&quot;Failed to display result: &quot; + e.message);
-            }
-        }
+            
         }
         // Lazy-load and play video
         function loadVideo(button, videoUrl, containerId) {
@@ -10600,9 +10556,8 @@
                                         debugLog(&quot;Failed to play video: &quot; + e.message);
                                     });
                                     debugLog(`Played existing video for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No video available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No video available`;
@@ -10627,9 +10582,8 @@
                                         debugLog(&quot;Failed to play audio: &quot; + e.message);
                                     });
                                     debugLog(`Played existing audio for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No audio available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No audio available`;
@@ -10637,9 +10591,8 @@
                             setTimeout(() =&gt; {
                                 overlay.style.display = &#x27;none&#x27;;
                             }, 2000);
-                        }
-                    }
-                }
+                        
+        }
                 // Handle question number input with Ctrl
                 if (digitKeys.includes(key) &amp;&amp; e.ctrlKey) {
                     e.preventDefault();
@@ -10696,9 +10649,8 @@
                         e.preventDefault();
                         closeExitModal();
                         debugLog(&quot;Closed exit modal via Escape&quot;);
-                    }
-                }
-            } catch (e) {
+                    
+        } catch (e) {
                 console.error(&quot;Error in modal keydown handler:&quot;, e);
                 debugLog(&quot;Failed in modal keydown handler: &quot; + e.message);
             }
@@ -11356,8 +11308,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
-            }
-        }
+            
         }
         // Select option
         function selectOption(index, label) {
@@ -11695,8 +11646,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying result:&quot;, e);
                 debugLog(&quot;Failed to display result: &quot; + e.message);
-            }
-        }
+            
         }
         // Lazy-load and play video
         function loadVideo(button, videoUrl, containerId) {
@@ -11915,9 +11865,8 @@
                                         debugLog(&quot;Failed to play video: &quot; + e.message);
                                     });
                                     debugLog(`Played existing video for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No video available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No video available`;
@@ -11942,9 +11891,8 @@
                                         debugLog(&quot;Failed to play audio: &quot; + e.message);
                                     });
                                     debugLog(`Played existing audio for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No audio available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No audio available`;
@@ -11952,9 +11900,8 @@
                             setTimeout(() =&gt; {
                                 overlay.style.display = &#x27;none&#x27;;
                             }, 2000);
-                        }
-                    }
-                }
+                        
+        }
                 // Handle question number input with Ctrl
                 if (digitKeys.includes(key) &amp;&amp; e.ctrlKey) {
                     e.preventDefault();
@@ -12011,9 +11958,8 @@
                         e.preventDefault();
                         closeExitModal();
                         debugLog(&quot;Closed exit modal via Escape&quot;);
-                    }
-                }
-            } catch (e) {
+                    
+        } catch (e) {
                 console.error(&quot;Error in modal keydown handler:&quot;, e);
                 debugLog(&quot;Failed in modal keydown handler: &quot; + e.message);
             }
@@ -12671,8 +12617,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
-            }
-        }
+            
         }
         // Select option
         function selectOption(index, label) {
@@ -13010,8 +12955,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying result:&quot;, e);
                 debugLog(&quot;Failed to display result: &quot; + e.message);
-            }
-        }
+            
         }
         // Lazy-load and play video
         function loadVideo(button, videoUrl, containerId) {
@@ -13230,9 +13174,8 @@
                                         debugLog(&quot;Failed to play video: &quot; + e.message);
                                     });
                                     debugLog(`Played existing video for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No video available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No video available`;
@@ -13257,9 +13200,8 @@
                                         debugLog(&quot;Failed to play audio: &quot; + e.message);
                                     });
                                     debugLog(`Played existing audio for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No audio available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No audio available`;
@@ -13267,9 +13209,8 @@
                             setTimeout(() =&gt; {
                                 overlay.style.display = &#x27;none&#x27;;
                             }, 2000);
-                        }
-                    }
-                }
+                        
+        }
                 // Handle question number input with Ctrl
                 if (digitKeys.includes(key) &amp;&amp; e.ctrlKey) {
                     e.preventDefault();
@@ -13326,9 +13267,8 @@
                         e.preventDefault();
                         closeExitModal();
                         debugLog(&quot;Closed exit modal via Escape&quot;);
-                    }
-                }
-            } catch (e) {
+                    
+        } catch (e) {
                 console.error(&quot;Error in modal keydown handler:&quot;, e);
                 debugLog(&quot;Failed in modal keydown handler: &quot; + e.message);
             }
@@ -13986,8 +13926,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
-            }
-        }
+            
         }
         // Select option
         function selectOption(index, label) {
@@ -14325,8 +14264,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying result:&quot;, e);
                 debugLog(&quot;Failed to display result: &quot; + e.message);
-            }
-        }
+            
         }
         // Lazy-load and play video
         function loadVideo(button, videoUrl, containerId) {
@@ -14545,9 +14483,8 @@
                                         debugLog(&quot;Failed to play video: &quot; + e.message);
                                     });
                                     debugLog(`Played existing video for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No video available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No video available`;
@@ -14572,9 +14509,8 @@
                                         debugLog(&quot;Failed to play audio: &quot; + e.message);
                                     });
                                     debugLog(`Played existing audio for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No audio available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No audio available`;
@@ -14582,9 +14518,8 @@
                             setTimeout(() =&gt; {
                                 overlay.style.display = &#x27;none&#x27;;
                             }, 2000);
-                        }
-                    }
-                }
+                        
+        }
                 // Handle question number input with Ctrl
                 if (digitKeys.includes(key) &amp;&amp; e.ctrlKey) {
                     e.preventDefault();
@@ -14641,9 +14576,8 @@
                         e.preventDefault();
                         closeExitModal();
                         debugLog(&quot;Closed exit modal via Escape&quot;);
-                    }
-                }
-            } catch (e) {
+                    
+        } catch (e) {
                 console.error(&quot;Error in modal keydown handler:&quot;, e);
                 debugLog(&quot;Failed in modal keydown handler: &quot; + e.message);
             }
@@ -15301,8 +15235,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
-            }
-        }
+            
         }
         // Select option
         function selectOption(index, label) {
@@ -15640,8 +15573,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying result:&quot;, e);
                 debugLog(&quot;Failed to display result: &quot; + e.message);
-            }
-        }
+            
         }
         // Lazy-load and play video
         function loadVideo(button, videoUrl, containerId) {
@@ -15860,9 +15792,8 @@
                                         debugLog(&quot;Failed to play video: &quot; + e.message);
                                     });
                                     debugLog(`Played existing video for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No video available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No video available`;
@@ -15887,9 +15818,8 @@
                                         debugLog(&quot;Failed to play audio: &quot; + e.message);
                                     });
                                     debugLog(`Played existing audio for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No audio available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No audio available`;
@@ -15897,9 +15827,8 @@
                             setTimeout(() =&gt; {
                                 overlay.style.display = &#x27;none&#x27;;
                             }, 2000);
-                        }
-                    }
-                }
+                        
+        }
                 // Handle question number input with Ctrl
                 if (digitKeys.includes(key) &amp;&amp; e.ctrlKey) {
                     e.preventDefault();
@@ -15956,9 +15885,8 @@
                         e.preventDefault();
                         closeExitModal();
                         debugLog(&quot;Closed exit modal via Escape&quot;);
-                    }
-                }
-            } catch (e) {
+                    
+        } catch (e) {
                 console.error(&quot;Error in modal keydown handler:&quot;, e);
                 debugLog(&quot;Failed in modal keydown handler: &quot; + e.message);
             }
@@ -16616,8 +16544,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
-            }
-        }
+            
         }
         // Select option
         function selectOption(index, label) {
@@ -16955,8 +16882,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying result:&quot;, e);
                 debugLog(&quot;Failed to display result: &quot; + e.message);
-            }
-        }
+            
         }
         // Lazy-load and play video
         function loadVideo(button, videoUrl, containerId) {
@@ -17175,9 +17101,8 @@
                                         debugLog(&quot;Failed to play video: &quot; + e.message);
                                     });
                                     debugLog(`Played existing video for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No video available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No video available`;
@@ -17202,9 +17127,8 @@
                                         debugLog(&quot;Failed to play audio: &quot; + e.message);
                                     });
                                     debugLog(`Played existing audio for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No audio available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No audio available`;
@@ -17212,9 +17136,8 @@
                             setTimeout(() =&gt; {
                                 overlay.style.display = &#x27;none&#x27;;
                             }, 2000);
-                        }
-                    }
-                }
+                        
+        }
                 // Handle question number input with Ctrl
                 if (digitKeys.includes(key) &amp;&amp; e.ctrlKey) {
                     e.preventDefault();
@@ -17271,9 +17194,8 @@
                         e.preventDefault();
                         closeExitModal();
                         debugLog(&quot;Closed exit modal via Escape&quot;);
-                    }
-                }
-            } catch (e) {
+                    
+        } catch (e) {
                 console.error(&quot;Error in modal keydown handler:&quot;, e);
                 debugLog(&quot;Failed in modal keydown handler: &quot; + e.message);
             }
@@ -17931,8 +17853,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
-            }
-        }
+            
         }
         // Select option
         function selectOption(index, label) {
@@ -18270,8 +18191,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying result:&quot;, e);
                 debugLog(&quot;Failed to display result: &quot; + e.message);
-            }
-        }
+            
         }
         // Lazy-load and play video
         function loadVideo(button, videoUrl, containerId) {
@@ -18490,9 +18410,8 @@
                                         debugLog(&quot;Failed to play video: &quot; + e.message);
                                     });
                                     debugLog(`Played existing video for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No video available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No video available`;
@@ -18517,9 +18436,8 @@
                                         debugLog(&quot;Failed to play audio: &quot; + e.message);
                                     });
                                     debugLog(`Played existing audio for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No audio available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No audio available`;
@@ -18527,9 +18445,8 @@
                             setTimeout(() =&gt; {
                                 overlay.style.display = &#x27;none&#x27;;
                             }, 2000);
-                        }
-                    }
-                }
+                        
+        }
                 // Handle question number input with Ctrl
                 if (digitKeys.includes(key) &amp;&amp; e.ctrlKey) {
                     e.preventDefault();
@@ -18586,9 +18503,8 @@
                         e.preventDefault();
                         closeExitModal();
                         debugLog(&quot;Closed exit modal via Escape&quot;);
-                    }
-                }
-            } catch (e) {
+                    
+        } catch (e) {
                 console.error(&quot;Error in modal keydown handler:&quot;, e);
                 debugLog(&quot;Failed in modal keydown handler: &quot; + e.message);
             }
@@ -19246,8 +19162,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
-            }
-        }
+            
         }
         // Select option
         function selectOption(index, label) {
@@ -19585,8 +19500,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying result:&quot;, e);
                 debugLog(&quot;Failed to display result: &quot; + e.message);
-            }
-        }
+            
         }
         // Lazy-load and play video
         function loadVideo(button, videoUrl, containerId) {
@@ -19805,9 +19719,8 @@
                                         debugLog(&quot;Failed to play video: &quot; + e.message);
                                     });
                                     debugLog(`Played existing video for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No video available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No video available`;
@@ -19832,9 +19745,8 @@
                                         debugLog(&quot;Failed to play audio: &quot; + e.message);
                                     });
                                     debugLog(`Played existing audio for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No audio available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No audio available`;
@@ -19842,9 +19754,8 @@
                             setTimeout(() =&gt; {
                                 overlay.style.display = &#x27;none&#x27;;
                             }, 2000);
-                        }
-                    }
-                }
+                        
+        }
                 // Handle question number input with Ctrl
                 if (digitKeys.includes(key) &amp;&amp; e.ctrlKey) {
                     e.preventDefault();
@@ -19901,9 +19812,8 @@
                         e.preventDefault();
                         closeExitModal();
                         debugLog(&quot;Closed exit modal via Escape&quot;);
-                    }
-                }
-            } catch (e) {
+                    
+        } catch (e) {
                 console.error(&quot;Error in modal keydown handler:&quot;, e);
                 debugLog(&quot;Failed in modal keydown handler: &quot; + e.message);
             }
@@ -20561,8 +20471,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
-            }
-        }
+            
         }
         // Select option
         function selectOption(index, label) {
@@ -20900,8 +20809,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying result:&quot;, e);
                 debugLog(&quot;Failed to display result: &quot; + e.message);
-            }
-        }
+            
         }
         // Lazy-load and play video
         function loadVideo(button, videoUrl, containerId) {
@@ -21120,9 +21028,8 @@
                                         debugLog(&quot;Failed to play video: &quot; + e.message);
                                     });
                                     debugLog(`Played existing video for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No video available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No video available`;
@@ -21147,9 +21054,8 @@
                                         debugLog(&quot;Failed to play audio: &quot; + e.message);
                                     });
                                     debugLog(`Played existing audio for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No audio available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No audio available`;
@@ -21157,9 +21063,8 @@
                             setTimeout(() =&gt; {
                                 overlay.style.display = &#x27;none&#x27;;
                             }, 2000);
-                        }
-                    }
-                }
+                        
+        }
                 // Handle question number input with Ctrl
                 if (digitKeys.includes(key) &amp;&amp; e.ctrlKey) {
                     e.preventDefault();
@@ -21216,9 +21121,8 @@
                         e.preventDefault();
                         closeExitModal();
                         debugLog(&quot;Closed exit modal via Escape&quot;);
-                    }
-                }
-            } catch (e) {
+                    
+        } catch (e) {
                 console.error(&quot;Error in modal keydown handler:&quot;, e);
                 debugLog(&quot;Failed in modal keydown handler: &quot; + e.message);
             }
@@ -21876,8 +21780,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
-            }
-        }
+            
         }
         // Select option
         function selectOption(index, label) {
@@ -22215,8 +22118,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying result:&quot;, e);
                 debugLog(&quot;Failed to display result: &quot; + e.message);
-            }
-        }
+            
         }
         // Lazy-load and play video
         function loadVideo(button, videoUrl, containerId) {
@@ -22435,9 +22337,8 @@
                                         debugLog(&quot;Failed to play video: &quot; + e.message);
                                     });
                                     debugLog(`Played existing video for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No video available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No video available`;
@@ -22462,9 +22363,8 @@
                                         debugLog(&quot;Failed to play audio: &quot; + e.message);
                                     });
                                     debugLog(`Played existing audio for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No audio available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No audio available`;
@@ -22472,9 +22372,8 @@
                             setTimeout(() =&gt; {
                                 overlay.style.display = &#x27;none&#x27;;
                             }, 2000);
-                        }
-                    }
-                }
+                        
+        }
                 // Handle question number input with Ctrl
                 if (digitKeys.includes(key) &amp;&amp; e.ctrlKey) {
                     e.preventDefault();
@@ -22531,9 +22430,8 @@
                         e.preventDefault();
                         closeExitModal();
                         debugLog(&quot;Closed exit modal via Escape&quot;);
-                    }
-                }
-            } catch (e) {
+                    
+        } catch (e) {
                 console.error(&quot;Error in modal keydown handler:&quot;, e);
                 debugLog(&quot;Failed in modal keydown handler: &quot; + e.message);
             }
@@ -23191,8 +23089,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
-            }
-        }
+            
         }
         // Select option
         function selectOption(index, label) {
@@ -23530,8 +23427,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying result:&quot;, e);
                 debugLog(&quot;Failed to display result: &quot; + e.message);
-            }
-        }
+            
         }
         // Lazy-load and play video
         function loadVideo(button, videoUrl, containerId) {
@@ -23750,9 +23646,8 @@
                                         debugLog(&quot;Failed to play video: &quot; + e.message);
                                     });
                                     debugLog(`Played existing video for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No video available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No video available`;
@@ -23777,9 +23672,8 @@
                                         debugLog(&quot;Failed to play audio: &quot; + e.message);
                                     });
                                     debugLog(`Played existing audio for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No audio available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No audio available`;
@@ -23787,9 +23681,8 @@
                             setTimeout(() =&gt; {
                                 overlay.style.display = &#x27;none&#x27;;
                             }, 2000);
-                        }
-                    }
-                }
+                        
+        }
                 // Handle question number input with Ctrl
                 if (digitKeys.includes(key) &amp;&amp; e.ctrlKey) {
                     e.preventDefault();
@@ -23846,9 +23739,8 @@
                         e.preventDefault();
                         closeExitModal();
                         debugLog(&quot;Closed exit modal via Escape&quot;);
-                    }
-                }
-            } catch (e) {
+                    
+        } catch (e) {
                 console.error(&quot;Error in modal keydown handler:&quot;, e);
                 debugLog(&quot;Failed in modal keydown handler: &quot; + e.message);
             }
@@ -24506,8 +24398,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
-            }
-        }
+            
         }
         // Select option
         function selectOption(index, label) {
@@ -24845,8 +24736,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying result:&quot;, e);
                 debugLog(&quot;Failed to display result: &quot; + e.message);
-            }
-        }
+            
         }
         // Lazy-load and play video
         function loadVideo(button, videoUrl, containerId) {
@@ -25065,9 +24955,8 @@
                                         debugLog(&quot;Failed to play video: &quot; + e.message);
                                     });
                                     debugLog(`Played existing video for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No video available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No video available`;
@@ -25092,9 +24981,8 @@
                                         debugLog(&quot;Failed to play audio: &quot; + e.message);
                                     });
                                     debugLog(`Played existing audio for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No audio available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No audio available`;
@@ -25102,9 +24990,8 @@
                             setTimeout(() =&gt; {
                                 overlay.style.display = &#x27;none&#x27;;
                             }, 2000);
-                        }
-                    }
-                }
+                        
+        }
                 // Handle question number input with Ctrl
                 if (digitKeys.includes(key) &amp;&amp; e.ctrlKey) {
                     e.preventDefault();
@@ -25161,9 +25048,8 @@
                         e.preventDefault();
                         closeExitModal();
                         debugLog(&quot;Closed exit modal via Escape&quot;);
-                    }
-                }
-            } catch (e) {
+                    
+        } catch (e) {
                 console.error(&quot;Error in modal keydown handler:&quot;, e);
                 debugLog(&quot;Failed in modal keydown handler: &quot; + e.message);
             }
@@ -25821,8 +25707,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
-            }
-        }
+            
         }
         // Select option
         function selectOption(index, label) {
@@ -26160,8 +26045,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying result:&quot;, e);
                 debugLog(&quot;Failed to display result: &quot; + e.message);
-            }
-        }
+            
         }
         // Lazy-load and play video
         function loadVideo(button, videoUrl, containerId) {
@@ -26380,9 +26264,8 @@
                                         debugLog(&quot;Failed to play video: &quot; + e.message);
                                     });
                                     debugLog(`Played existing video for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No video available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No video available`;
@@ -26407,9 +26290,8 @@
                                         debugLog(&quot;Failed to play audio: &quot; + e.message);
                                     });
                                     debugLog(`Played existing audio for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No audio available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No audio available`;
@@ -26417,9 +26299,8 @@
                             setTimeout(() =&gt; {
                                 overlay.style.display = &#x27;none&#x27;;
                             }, 2000);
-                        }
-                    }
-                }
+                        
+        }
                 // Handle question number input with Ctrl
                 if (digitKeys.includes(key) &amp;&amp; e.ctrlKey) {
                     e.preventDefault();
@@ -26476,9 +26357,8 @@
                         e.preventDefault();
                         closeExitModal();
                         debugLog(&quot;Closed exit modal via Escape&quot;);
-                    }
-                }
-            } catch (e) {
+                    
+        } catch (e) {
                 console.error(&quot;Error in modal keydown handler:&quot;, e);
                 debugLog(&quot;Failed in modal keydown handler: &quot; + e.message);
             }
@@ -27136,8 +27016,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
-            }
-        }
+            
         }
         // Select option
         function selectOption(index, label) {
@@ -27475,8 +27354,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying result:&quot;, e);
                 debugLog(&quot;Failed to display result: &quot; + e.message);
-            }
-        }
+            
         }
         // Lazy-load and play video
         function loadVideo(button, videoUrl, containerId) {
@@ -27695,9 +27573,8 @@
                                         debugLog(&quot;Failed to play video: &quot; + e.message);
                                     });
                                     debugLog(`Played existing video for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No video available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No video available`;
@@ -27722,9 +27599,8 @@
                                         debugLog(&quot;Failed to play audio: &quot; + e.message);
                                     });
                                     debugLog(`Played existing audio for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No audio available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No audio available`;
@@ -27732,9 +27608,8 @@
                             setTimeout(() =&gt; {
                                 overlay.style.display = &#x27;none&#x27;;
                             }, 2000);
-                        }
-                    }
-                }
+                        
+        }
                 // Handle question number input with Ctrl
                 if (digitKeys.includes(key) &amp;&amp; e.ctrlKey) {
                     e.preventDefault();
@@ -27791,9 +27666,8 @@
                         e.preventDefault();
                         closeExitModal();
                         debugLog(&quot;Closed exit modal via Escape&quot;);
-                    }
-                }
-            } catch (e) {
+                    
+        } catch (e) {
                 console.error(&quot;Error in modal keydown handler:&quot;, e);
                 debugLog(&quot;Failed in modal keydown handler: &quot; + e.message);
             }
@@ -28451,8 +28325,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
-            }
-        }
+            
         }
         // Select option
         function selectOption(index, label) {
@@ -28790,8 +28663,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying result:&quot;, e);
                 debugLog(&quot;Failed to display result: &quot; + e.message);
-            }
-        }
+            
         }
         // Lazy-load and play video
         function loadVideo(button, videoUrl, containerId) {
@@ -29010,9 +28882,8 @@
                                         debugLog(&quot;Failed to play video: &quot; + e.message);
                                     });
                                     debugLog(`Played existing video for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No video available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No video available`;
@@ -29037,9 +28908,8 @@
                                         debugLog(&quot;Failed to play audio: &quot; + e.message);
                                     });
                                     debugLog(`Played existing audio for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No audio available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No audio available`;
@@ -29047,9 +28917,8 @@
                             setTimeout(() =&gt; {
                                 overlay.style.display = &#x27;none&#x27;;
                             }, 2000);
-                        }
-                    }
-                }
+                        
+        }
                 // Handle question number input with Ctrl
                 if (digitKeys.includes(key) &amp;&amp; e.ctrlKey) {
                     e.preventDefault();
@@ -29106,9 +28975,8 @@
                         e.preventDefault();
                         closeExitModal();
                         debugLog(&quot;Closed exit modal via Escape&quot;);
-                    }
-                }
-            } catch (e) {
+                    
+        } catch (e) {
                 console.error(&quot;Error in modal keydown handler:&quot;, e);
                 debugLog(&quot;Failed in modal keydown handler: &quot; + e.message);
             }
@@ -29766,8 +29634,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
-            }
-        }
+            
         }
         // Select option
         function selectOption(index, label) {
@@ -30105,8 +29972,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying result:&quot;, e);
                 debugLog(&quot;Failed to display result: &quot; + e.message);
-            }
-        }
+            
         }
         // Lazy-load and play video
         function loadVideo(button, videoUrl, containerId) {
@@ -30325,9 +30191,8 @@
                                         debugLog(&quot;Failed to play video: &quot; + e.message);
                                     });
                                     debugLog(`Played existing video for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No video available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No video available`;
@@ -30352,9 +30217,8 @@
                                         debugLog(&quot;Failed to play audio: &quot; + e.message);
                                     });
                                     debugLog(`Played existing audio for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No audio available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No audio available`;
@@ -30362,9 +30226,8 @@
                             setTimeout(() =&gt; {
                                 overlay.style.display = &#x27;none&#x27;;
                             }, 2000);
-                        }
-                    }
-                }
+                        
+        }
                 // Handle question number input with Ctrl
                 if (digitKeys.includes(key) &amp;&amp; e.ctrlKey) {
                     e.preventDefault();
@@ -30421,9 +30284,8 @@
                         e.preventDefault();
                         closeExitModal();
                         debugLog(&quot;Closed exit modal via Escape&quot;);
-                    }
-                }
-            } catch (e) {
+                    
+        } catch (e) {
                 console.error(&quot;Error in modal keydown handler:&quot;, e);
                 debugLog(&quot;Failed in modal keydown handler: &quot; + e.message);
             }
@@ -31081,8 +30943,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying question:&quot;, e);
                 debugLog(&quot;Failed to display question: &quot; + e.message);
-            }
-        }
+            
         }
         // Select option
         function selectOption(index, label) {
@@ -31420,8 +31281,7 @@
             } catch (e) {
                 console.error(&quot;Error displaying result:&quot;, e);
                 debugLog(&quot;Failed to display result: &quot; + e.message);
-            }
-        }
+            
         }
         // Lazy-load and play video
         function loadVideo(button, videoUrl, containerId) {
@@ -31640,9 +31500,8 @@
                                         debugLog(&quot;Failed to play video: &quot; + e.message);
                                     });
                                     debugLog(`Played existing video for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No video available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No video available`;
@@ -31667,9 +31526,8 @@
                                         debugLog(&quot;Failed to play audio: &quot; + e.message);
                                     });
                                     debugLog(`Played existing audio for question ${currentResultQuestion + 1}`);
-                                }
-                            }
-                        } else {
+                                
+        } else {
                             console.warn(`No audio available for question ${currentResultQuestion + 1}`);
                             const overlay = document.getElementById(&#x27;number-input-overlay&#x27;);
                             overlay.textContent = `No audio available`;
@@ -31677,9 +31535,8 @@
                             setTimeout(() =&gt; {
                                 overlay.style.display = &#x27;none&#x27;;
                             }, 2000);
-                        }
-                    }
-                }
+                        
+        }
                 // Handle question number input with Ctrl
                 if (digitKeys.includes(key) &amp;&amp; e.ctrlKey) {
                     e.preventDefault();
@@ -31736,9 +31593,8 @@
                         e.preventDefault();
                         closeExitModal();
                         debugLog(&quot;Closed exit modal via Escape&quot;);
-                    }
-                }
-            } catch (e) {
+                    
+        } catch (e) {
                 console.error(&quot;Error in modal keydown handler:&quot;, e);
                 debugLog(&quot;Failed in modal keydown handler: &quot; + e.message);
             }
